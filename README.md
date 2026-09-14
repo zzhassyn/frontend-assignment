@@ -22,26 +22,26 @@ The complete project is configured for **GitHub Pages** deployment:
 - **Live URL:** [https://zzhassyn.github.io/frontend-assignment/](https://zzhassyn.github.io/frontend-assignment/)
 - **Repository URL:** [https://github.com/zzhassyn/frontend-assignment](https://github.com/zzhassyn/frontend-assignment)
 
-A shared, interactive top navigation bar (`navbar`) connects all 5 tasks across separate pages.
+A shared top navigation bar (`navbar`) connects all 5 tasks across separate pages.
 
 ---
 
-## 📁 Repository Structure
+## 📁 Repository Structure (Структура проекта)
 
 ```text
 frontend-assignment/
-├── index.html                   # Task 1: Personal Webpage & Introduction to HTML/CSS (GitHub Pages Root)
-├── styles.css                   # Task 1: CSS styling (Element, Class, ID selectors, Box Model)
-├── task2.html                   # Task 2: Page Layout using <div> + positioning/floats (Zero Flex/Grid)
-├── task2.css                    # Task 2: CSS styling (float: left, float: right, clearfix)
+├── index.html                   # Task 1: Personal Webpage & Introduction to HTML/CSS
+├── styles.css                   # Task 1: Element, Class, ID selectors & CSS Box Model
+├── task2.html                   # Task 2: Page Layout using <div> + Floats (No Flexbox / No Grid)
+├── task2.css                    # Task 2: float: left, float: right, clear: both
 ├── exercise1/                   # Task 3: Tribute Page folder (per assignment specification)
 │   ├── index.html               # Task 3: Alan Turing Tribute HTML
 │   └── styles.css               # Task 3: Google Fonts, image styling, lists, buttons
 ├── task3.html                   # Task 3 root alias / redirect to exercise1/index.html
-├── task4.html                   # Task 4: CSS Table (Student Grades) & Course Feedback Form
-├── task4.css                    # Task 4: CSS styling (nth-child, highlight-row, colspan/rowspan, form)
+├── task4.html                   # Task 4: CSS Table (Student Grades) & Feedback Form
+├── task4.css                    # Task 4: Table (:nth-child, .highlight-row, colspan/rowspan) & Form
 ├── task5.html                   # Task 5: Midterm Project (DevSphere) Topic, Sitemap & 5 Wireframes
-├── task5.css                    # Task 5: CSS styling (Sitemap tree, wireframe viewer, responsive cards)
+├── task5.css                    # Task 5: Sitemap structure & Wireframe viewer
 ├── images/                      # Media assets & SVG blueprints
 │   ├── avatar.svg               # Profile avatar illustration
 │   ├── alan_turing.svg          # Alan Turing tribute portrait illustration
@@ -52,116 +52,110 @@ frontend-assignment/
 │       ├── page4_community.svg  # Page 4: Student Community Directory wireframe
 │       └── page5_contact.svg    # Page 5: Contact & Support wireframe
 ├── assignment1_frontend.docx    # Original assignment prompt document
-└── README.md                    # Project documentation, instructions & defense preparation
+└── README.md                    # Project documentation & defense preparation guide
 ```
 
 ---
 
-## 📋 Detailed Task Breakdown & Requirements Fulfillment
+## 📋 Task Overview & Requirements Fulfillment
 
 ### 🔹 Task 1: Introduction to HTML & CSS (`index.html`, `styles.css`)
-- **HTML Structure:** Semantic hierarchy with `<header id="main-header">`, `<main>`, `<section>`, `<h1>`, `<h2>`, `<h3>`, and informative paragraphs.
-- **Lists Included:**
+- **HTML:** Semantic hierarchy (`<header id="main-header">`, `<main>`, `<section>`, `<h1>`, `<h2>`, `<p>`).
+- **Lists:**
   - Ordered List (`<ol>` with 5 items): Chronological web development milestones.
-  - Unordered List (`<ul>` with 5 items): Core web technologies and toolchains.
-- **Profile Card:** Dedicated card containing portrait image (`<img>` with descriptive `alt`), student name (**Zhassyn Zhalynuly**), team roster (**Mardan Khalilov**, **Raiymbek Maksotov**), university credentials, and bio.
-- **Links & Images:** Multiple clickable external links (`<a>` with animated hover effects) and optimized SVG avatar with `border-radius: 50%` and `max-width`.
-- **CSS Selectors Required:**
-  - *Element Selectors:* `body`, `h1`, `h2`, `p`, `a`, `ol`, `ul`, `li`, `main`, `footer`.
-  - *Class Selectors:* `.profile-card`, `.nav-link`, `.btn-primary`, `.badge-pill`, etc.
-  - *ID Selectors:* `#main-header`, `#hero-banner`, `#profile-section`, `#main-footer`.
+  - Unordered List (`<ul>` with 5 items): Core web technologies and tools.
+- **Profile Card:** Image (`<img>` with `alt`), student name (**Zhassyn Zhalynuly**), group (**SE-24 &bull; Astana IT University**), description, and team members (**Mardan Khalilov**, **Raiymbek Maksotov**).
+- **CSS Selectors (3 required types):**
+  1. *Element Selectors:* `body`, `h1`, `h2`, `p`, `a`, `ol`, `ul`, `li`, `img`.
+  2. *Class Selectors:* `.container`, `.navbar`, `.profile-card`, `.list-card`, `.btn`.
+  3. *ID Selectors:* `#main-header`, `#hero`, `#profile`, `#main-footer`.
+- **CSS Box Model:** `margin`, `padding`, `border`, `border-radius`, `box-sizing: border-box`.
+- **Links:** Clickable links with hover effect (`a:hover`).
 
-### 🔹 Task 2: Page Layout Using `<div>` + Floats & Positioning (`task2.html`, `task2.css`)
-- **Strict Architectural Constraint:** **NO CSS Flexbox (`display: flex`) and NO CSS Grid (`display: grid`)**.
+### 🔹 Task 2: Page Layout Using `<div>` + Floats (`task2.html`, `task2.css`)
+- **Strict Constraint:** **NO Flexbox (`display: flex`) and NO Grid (`display: grid`)**.
 - **Layout Sections:**
   - *Header:* Website title and tagline.
-  - *Navigation Bar:* 5 navigation links linking all tasks.
-  - *Sidebar Menu (Left):* `float: left; width: 28%`, containing 5 menu links and an informational callout box.
-  - *Main Content / Aside (Right):* `float: right; width: 68%`, featuring headers, paragraphs, and quote badges.
-  - *Clearfix:* Clear element with `clear: both;` ensuring zero parent container collapse.
-  - *Footer:* Full-width bottom bar with `clear: both;` and copyright text.
+  - *Navigation Bar:* Links to all 5 tasks using `display: inline-block`.
+  - *Sidebar Menu (Left):* `float: left; width: 28%;`, with menu links and callout box.
+  - *Main Content (Right):* `float: right; width: 68%;`, with headings and paragraphs explaining float and clear.
+  - *Clearfix:* Clear element with `clear: both;` ensuring zero container collapse.
+  - *Footer:* Full-width bottom bar with copyright text.
 
 ### 🔹 Task 3: Tribute Page &mdash; Alan Turing (`exercise1/index.html`, `exercise1/styles.css`)
-- **Step 0:** Created in dedicated `exercise1/` folder with linked `styles.css` (also accessible via `task3.html`).
-- **Step 1:** Main heading `<h1>Alan Mathison Turing</h1>`, subheading `<h2>About Alan Turing</h2>`, birth/death tagline `<h3>`, and a 5-sentence biographical summary.
-- **Step 2:**
-  - Ordered List (`<ol>`): 6 major chronological milestones (Cambridge fellowship, Turing Machine paper, Bletchley Park Enigma codebreaking, ACE computer, Turing Test, Morphogenesis).
-  - Unordered List (`<ul>`): 5 key inventions & scientific breakthroughs.
-- **Step 3:** Portrait `<img>` with descriptive `alt` attribute, multiple links, and a styled `.btn-wikipedia` ("Learn More on Wikipedia").
-- **Step 4 CSS Styling:**
-  - Gradient dark theme background (`#0f172a` to `#1e293b`).
-  - Google Fonts integrated: `Cinzel` (classical serif for headings) and `Plus Jakarta Sans` (sans-serif for body).
-  - Styled `.content` container with `max-width: 860px; margin: 0 auto; padding: 3rem 1.5rem;`.
-  - Image with `border-radius: 16px;`, glowing box-shadow, and hover scale micro-interaction.
+- **Folder:** Created in dedicated `exercise1/` directory.
+- **Content:**
+  - Main heading `<h1>Alan Mathison Turing</h1>`, subheading `<h2>About Alan Turing</h2>`, birth/death tagline `<h3>`.
+  - Summary paragraph (3–5 sentences) about Turing's life, Enigma codebreaking, and computing theories.
+  - Ordered list (`<ol>`): 6 chronological milestones.
+  - Unordered list (`<ul>`): 5 key inventions and contributions.
+  - Portrait `<img>` with descriptive `alt` attribute.
+  - Clickable links and a styled `.btn` ("Learn more on Wikipedia").
+- **CSS (Step 4):**
+  - Page background color.
+  - Two Google Fonts linked: `Cinzel` (headings) and `Plus Jakarta Sans` (body).
+  - Header: background, text color, padding, center alignment.
+  - Container `.content`: `max-width: 800px; margin: 0 auto; padding: 30px 15px;`.
+  - Image: `max-width`, `border-radius`, `box-shadow`, `border`.
+  - Headings, paragraphs, lists (`list-style-type`, spacing), and `.btn` hover effect.
 
-### 🔹 Task 4: CSS Tables and Feedback Form (`task4.html`, `task4.css`)
-- **Part 1: Student Grades Table:**
-  - Columns: Department, Student Full Name, Course Subject, Assignment Score, Final Letter Grade, Academic Status.
-  - Rows: Features team members **Zhassyn Zhalynuly**, **Mardan Khalilov**, and **Raiymbek Maksotov**.
-  - Background color on table header (`th`) and solid borders on all cells (`border-collapse: collapse;`).
-  - Alternate row striping using `tr:nth-child(even)` and `tr:nth-child(odd)`.
-  - Highlighted row with distinct background using `.highlight-row`.
+### 🔹 Task 4: CSS Table and Feedback Form (`task4.html`, `task4.css`)
+- **Table Styling:**
+  - Student grades table featuring **Zhassyn Zhalynuly**, **Mardan Khalilov**, and **Raiymbek Maksotov**.
+  - Background color on table header (`th`) and borders for all cells (`border-collapse: collapse;`).
+  - Alternate row striping using `tr:nth-child(even)`.
+  - Highlighted row with distinct background color using `.highlight-row`.
   - Center-aligned cell text (`text-align: center`).
-  - Merged cells: `rowspan="3"` for Department and `colspan="3"` for cohort summary row.
-  - Custom page heading using ID selector `#table-custom-heading`.
-- **Part 2: Interactive Feedback Form:**
-  - Centered on page with `max-width: 580px; margin: 0 auto;` with background color, padding, and rounded corners.
-  - Bold styled `<label>` elements.
-  - Fields included: Text input (Name), Email input (Email), Select dropdown (Role: Student, Teacher, Other), Radio buttons (Yes/No course recommendation), Textarea (Comments), Submit button.
-  - Styled submit button with background color, rounded corners, and hover lift effects.
-  - CSS includes both `#feedback-form-title`, `#course-feedback-form` (IDs) and `.styled-feedback-form`, `.form-control` (Classes).
+  - Merged cells: `rowspan="3"` for Department and `colspan="3"` for summary average row.
+  - Page heading above table with an ID selector (`#table-heading`).
+- **Feedback Form:**
+  - Centered on page with `max-width: 520px; margin: 0 auto;`, background color, padding, and rounded corners (`#feedback-form`).
+  - Bold styled `<label>` elements (`font-weight: bold;`).
+  - Form fields: Text (Name), Email (Address), Select dropdown (Academic Role), Radio buttons (Yes/No recommendation), Textarea (Comments), Submit button.
+  - Submit button with background color, rounded corners, and hover effect.
+  - ID and Class selectors used: `#form-heading`, `#feedback-form`, `#btn-submit`, `.form-group`, `.btn-submit`.
 
-### 🔹 Task 5: Midterm Project Specification & Wireframes (`task5.html`, `task5.css`)
-- **Group Project Topic:** **DevSphere &mdash; Collaborative Student Developer &amp; Project Showcase Platform**.
-- **Project Description (3–5 sentences):**
-  > DevSphere is a centralized web platform designed specifically for university software engineering students and student developers at Astana IT University. The target users are undergraduate students seeking portfolio recognition, peer collaborators looking to join ongoing software builds, and faculty mentors monitoring capstone projects. The primary purpose of the website is to streamline student project discovery, provide an open repository for university-wide code showcases, and foster peer-to-peer recruitment across specialized technical disciplines. By integrating detailed project portfolios, member skill matrices, and direct team application workflows, DevSphere elevates student projects from isolated coursework into collaborative campus initiatives.
-- **Sitemap Architecture:** Visual navigation tree diagram displaying how all 5 pages link together under the persistent navigation bar and footer.
-- **5-Page Low-Fidelity Wireframes Designed &amp; Embedded:**
-  1. **Page 1: Home / Landing Page** &mdash; Hero banner, CTA buttons, 3-column featured projects grid, platform metrics counter.
-  2. **Page 2: Projects Catalog Page** &mdash; Search bar, category &amp; status filter sidebar, 4-project responsive grid, pagination.
-  3. **Page 3: Project Details Page** &mdash; Screenshot gallery placeholder, tech stack badges, live demo/repo links, team roster, and application form.
-  4. **Page 4: Student Community Directory** &mdash; Search header, major dropdown, student cards for Zhassyn, Mardan, and Raiymbek with skill badges and profile links.
-  5. **Page 5: Contact &amp; Support Page** &mdash; 2-column layout with student inquiry form, university office hours, and FAQ accordion.
-
----
-
-## 🚀 How to Run Locally
-
-You can run this project locally without any server dependencies:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/zzhassyn/frontend-assignment.git
-   cd frontend-assignment
-   ```
-2. Open `index.html` in any modern web browser (Google Chrome, Mozilla Firefox, Microsoft Edge, Safari):
-   - On Windows: Double-click `index.html` or run:
-     ```powershell
-     start index.html
-     ```
-   - Or start a local Python HTTP development server:
-     ```bash
-     python -m http.server 8000
-     ```
-     Then open `http://localhost:8000` in your browser.
+### 🔹 Task 5: Midterm Project Topic & Wireframes (`task5.html`, `task5.css`)
+- **Group Project Topic:** **DevSphere &mdash; Student Developer &amp; Project Showcase Platform**.
+- **Project Description (3–5 sentences):** Explains the topic, target users (AITU software engineering students), and purpose (portfolio showcase, teammate recruitment, open project repository).
+- **Group Authors:** Zhassyn Zhalynuly, Mardan Khalilov, Raiymbek Maksotov.
+- **Sitemap:** Hierarchical navigation structure showing how all 5 pages link together under the persistent header and footer.
+- **5 Low-Fidelity Wireframes Designed & Embedded:**
+  1. *Page 1: Home / Landing Page* &mdash; Hero banner, CTA buttons, 3-column project cards, metrics counter.
+  2. *Page 2: Projects Catalog* &mdash; Search bar, category filter sidebar, 2-column project grid, pagination.
+  3. *Page 3: Project Details Page* &mdash; Screenshot gallery placeholder, tech tags, demo/repo links, team roster, join form.
+  4. *Page 4: Student Community Directory* &mdash; Search header, major filter, developer cards with skill badges.
+  5. *Page 5: Contact & Support Page* &mdash; Inquiry form, campus office hours, FAQ section.
 
 ---
 
-## 🎯 Assignment Oral Defense Preparation Guide
+## 🎯 Шпаргалка для устной защиты (Oral Defense Cheat Sheet)
 
-During oral defense at practice lesson time, be ready to explain the following core concepts implemented in our code:
+На устной защите преподаватель может задать вопросы по коду. Вот простые и четкие ответы:
 
-1. **The CSS Box Model:**
-   - Every HTML element is modeled as a box consisting of: `content` &rarr; `padding` &rarr; `border` &rarr; `margin`.
-   - `box-sizing: border-box;` ensures padding and borders are included within the element's total width and height calculations, preventing unexpected overflow.
-2. **CSS Selector Specificity:**
-   - Order of specificity: Inline styles (1000) &gt; ID selectors (100) &gt; Class, attribute, and pseudo-class selectors (10) &gt; Element and pseudo-element selectors (1).
-   - In Task 1 and Task 4, ID selectors (e.g. `#main-header`, `#table-custom-heading`) uniquely override general class rules.
-3. **Float vs. Flexbox (Task 2 vs. Modern Layouts):**
-   - In Task 2, `float: left` and `float: right` remove elements from normal block formatting context.
-   - The `.clearfix` (`clear: both;`) is mandatory because floated children do not report their height to the parent container, which would otherwise collapse to `height: 0`.
-4. **Table Merging Attributes:**
-   - `rowspan="3"` merges 3 vertical table rows into a single cell (used for the academic department).
-   - `colspan="3"` merges 3 horizontal table columns into a single cell (used for the cohort average summary).
-5. **Form Accessibility & Interaction:**
-   - The `for` attribute in `<label>` matches the `id` of the `<input>` element, enabling assistive screen readers and expanding the clickable tap target.
+1. **Что такое CSS Box Model (Блочная модель)?**
+   - Каждый HTML-элемент браузер представляет как прямоугольный блок, состоящий из 4 слоев:
+     1. `content` — содержимое (текст, картинка).
+     2. `padding` — внутренний отступ от содержимого до рамки.
+     3. `border` — рамка вокруг элемента.
+     4. `margin` — внешний отступ от элемента до соседних блоков.
+   - `box-sizing: border-box;` заставляет браузер включать `padding` и `border` в общую ширину (`width`), чтобы элементы не вылезали за пределы экрана.
+
+2. **Чем отличаются селекторы (Element, Class, ID)?**
+   - **Element selector** (`p`, `h1`, `a`): применяет стили ко всем тегам этого типа на всей странице.
+   - **Class selector** (`.profile-card`, `.navbar`): можно применять к нескольким элементам, начинается с точки.
+   - **ID selector** (`#main-header`, `#feedback-form`): уникальный идентификатор, применяется только к одному конкретному элементу на странице, имеет более высокий приоритет (специфичность), начинается с решетки `#`.
+
+3. **Как работает `float` и зачем нужен `clear: both` (clearfix) во 2 задании?**
+   - `float: left` и `float: right` сдвигают блоки влево и вправо, выводя их из нормального потока документа.
+   - Из-за этого родительский блок "теряет" высоту своих плавающих детей и схлопывается в 0.
+   - Элемент с `clear: both;` (clearfix) отменяет обтекание и заставляет родительский контейнер полностью растянуться на высоту колонок.
+
+4. **Как объединять ячейки в таблице (Task 4)?**
+   - `rowspan="3"` — объединяет 3 строки по вертикали (у нас объединяет ячейку кафедры Computer Science).
+   - `colspan="3"` — объединяет 3 столбца по горизонтали (у нас объединяет итоговую строку среднего балла).
+   - `border-collapse: collapse;` — убирает двойные расстояния между ячейками и делает аккуратные одинарные границы.
+   - `:nth-child(even)` — автоматически красит четные строки таблицы другим цветом (эффект зебры).
+
+5. **Как связаны `<label>` и `<input>` в форме?**
+   - Атрибут `for` у `<label>` должен в точности совпадать с атрибутом `id` у соответствующего `<input>`. При клике на текст метки курсор автоматически встает в поле ввода, что важно для доступности (accessibility).

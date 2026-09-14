@@ -1,10 +1,9 @@
 /* ==========================================================================
    ASSIGNMENT 1: TASK 4 - CSS TABLE & FORM STYLING
    Authors: Zhassyn Zhalynuly, Mardan Khalilov, Raiymbek Maksotov
-   Styles demonstrating Table nth-child, highlight-row, cell borders, centered form
    ========================================================================== */
 
-/* Universal Reset */
+/* 1. Базовые стили */
 * {
   margin: 0;
   padding: 0;
@@ -12,478 +11,261 @@
 }
 
 body {
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background-color: #f8fafc;
-  color: #1e293b;
+  font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+  background-color: #f1f5f9;
+  color: #334155;
   line-height: 1.6;
   font-size: 15px;
-  min-height: 100vh;
 }
 
-/* --------------------------------------------------------------------------
-   GLOBAL TOP NAVIGATION
-   -------------------------------------------------------------------------- */
-.top-nav-bar {
-  background-color: #ffffff;
-  border-bottom: 1px solid #e2e8f0;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04);
+/* 2. Верхняя панель навигации */
+.top-nav {
+  background-color: #1e293b;
+  border-bottom: 3px solid #2563eb;
+  padding: 12px 20px;
 }
 
-.nav-container {
-  max-width: 1100px;
+.nav-inner {
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 0.85rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 10px;
 }
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-
-.badge {
-  background-color: #4f46e5;
+.logo {
+  font-size: 20px;
+  font-weight: bold;
   color: #ffffff;
-  font-weight: 800;
-  font-size: 0.85rem;
-  padding: 0.3rem 0.6rem;
-  border-radius: 6px;
 }
 
-.title {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
-  font-size: 1.15rem;
-  color: #0f172a;
+.logo span {
+  color: #60a5fa;
+  font-weight: normal;
 }
 
-.nav-links {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.nav-links a {
-  color: #475569;
-  font-weight: 600;
-  font-size: 0.92rem;
-  padding: 0.5rem 0.85rem;
-  border-radius: 8px;
+.navbar a {
+  color: #cbd5e1;
   text-decoration: none;
-  transition: all 0.2s ease;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  display: inline-block;
 }
 
-.nav-links a:hover {
-  background-color: #eef2ff;
-  color: #4f46e5;
-}
-
-.nav-links a.active {
-  background-color: #4f46e5;
+.navbar a:hover {
+  background-color: #334155;
   color: #ffffff;
 }
 
-/* Page Layout */
+.navbar a.active {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+/* Общий контейнер */
 .page-container {
-  max-width: 1050px;
-  margin: 2.5rem auto;
-  padding: 0 1.5rem;
+  max-width: 1000px;
+  margin: 25px auto;
+  padding: 0 15px;
 }
 
 .section-card {
   background-color: #ffffff;
   border: 1px solid #e2e8f0;
-  border-radius: 16px;
-  padding: 2.5rem;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
-  margin-bottom: 3rem;
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
 }
 
-/* --------------------------------------------------------------------------
-   PART 1: CSS TABLE STYLING
-   -------------------------------------------------------------------------- */
-
-/* ID Selector Requirement: Custom Page Heading above the table */
-#table-custom-heading {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 2.1rem;
-  color: #1e1b4b;
-  text-align: center;
-  margin-bottom: 0.75rem;
-  letter-spacing: -0.02em;
-  position: relative;
-  padding-bottom: 0.75rem;
-}
-
-#table-custom-heading::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 4px;
-  background-color: #4f46e5;
-  border-radius: 2px;
-}
-
-.section-intro {
+.section-desc {
   text-align: center;
   color: #64748b;
-  max-width: 780px;
-  margin: 0 auto 2rem auto;
-  font-size: 0.98rem;
+  margin-bottom: 25px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.code-tag {
+.section-desc code {
   background-color: #f1f5f9;
-  color: #4f46e5;
-  font-family: monospace;
-  font-size: 0.85em;
-  padding: 0.2rem 0.4rem;
+  padding: 2px 6px;
   border-radius: 4px;
-  border: 1px solid #e2e8f0;
+  color: #2563eb;
 }
 
-/* Table Wrapper for horizontal scroll on mobile */
-.table-wrapper {
+/* ==========================================================================
+   PART 1: CSS TABLE STYLING (Стилизация таблицы)
+   ========================================================================== */
+
+/* Требование: Заголовок страницы над таблицей с ID селектором */
+#table-heading {
+  color: #1e3a8a;
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.table-responsive {
   overflow-x: auto;
-  margin-bottom: 1.5rem;
-  border-radius: 12px;
-  border: 1px solid #cbd5e1;
 }
 
-/* Table element styling */
+/* Стили таблицы */
 .grades-table {
   width: 100%;
-  border-collapse: collapse; /* Borders for all cells merged seamlessly */
-  font-size: 0.95rem;
-  background-color: #ffffff;
+  border-collapse: collapse; /* Схлопывание рамок в единые границы */
+  margin: 10px 0;
 }
 
-/* Table Header Background & Borders */
-.grades-table thead tr {
-  background-color: #1e1b4b; /* Distinct background color for header */
-  color: #ffffff;
-}
-
-.grades-table th {
-  padding: 14px 16px;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 0.82rem;
-  letter-spacing: 0.05em;
-  border: 1px solid #334155; /* Cell borders */
-  text-align: center; /* Center-aligned text */
-}
-
-/* All table cells: borders, padding, center-aligned text */
+/* Рамки, отступы и выравнивание по центру для всех ячеек */
+.grades-table th,
 .grades-table td {
-  padding: 14px 16px; /* Padding for readability */
-  border: 1px solid #e2e8f0; /* Cell borders */
-  text-align: center; /* Center-aligned text inside cells */
-  color: #334155;
-}
-
-/* Alternate row coloring using nth-child */
-.grades-table tbody tr:nth-child(even) {
-  background-color: #f8fafc; /* Subtle light background on even rows */
-}
-
-.grades-table tbody tr:nth-child(odd) {
-  background-color: #ffffff;
-}
-
-/* Highlight one row with different background color using .highlight-row class */
-.grades-table tbody tr.highlight-row {
-  background-color: #eef2ff !important; /* Soft indigo highlight */
-  border-left: 4px solid #4f46e5;
-}
-
-.grades-table tbody tr.highlight-row td {
-  font-weight: 600;
-  color: #1e1b4b;
-  border-color: #c7d2fe;
-}
-
-/* Merged cell styling (rowspan / colspan) */
-.dept-merged-cell {
-  background-color: #f1f5f9;
-  font-weight: 700;
-  color: #475569;
-  vertical-align: middle;
-}
-
-.table-summary-row {
-  background-color: #f8fafc;
-  font-weight: 700;
-}
-
-.table-summary-row .summary-label {
-  text-align: right;
-  padding-right: 1.5rem;
-  color: #0f172a;
-  background-color: #f1f5f9;
-}
-
-.table-summary-row .summary-val {
-  text-align: center;
-  color: #166534;
-  background-color: #f0fdf4;
-}
-
-/* Status Badges */
-.status-pill {
-  display: inline-block;
-  padding: 0.3rem 0.75rem;
-  border-radius: 9999px;
-  font-size: 0.8rem;
-  font-weight: 700;
-}
-
-.status-passed {
-  background-color: #dcfce7;
-  color: #15803d;
-  border: 1px solid #bbf7d0;
-}
-
-.status-good {
-  background-color: #e0f2fe;
-  color: #0369a1;
-  border: 1px solid #bae6fd;
-}
-
-.badge-tag {
-  background-color: #e0e7ff;
-  color: #4338ca;
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 0.15rem 0.4rem;
-  border-radius: 4px;
-  margin-left: 0.35rem;
-  vertical-align: middle;
-}
-
-/* Table Legend */
-.table-legend {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  font-size: 0.85rem;
-  color: #64748b;
-  padding-top: 0.5rem;
-}
-
-.legend-item {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-
-.legend-box {
-  width: 14px;
-  height: 14px;
-  border-radius: 3px;
   border: 1px solid #cbd5e1;
-  display: inline-block;
+  padding: 12px 14px;
+  text-align: center; /* Выравнивание текста по центру ячеек */
 }
 
-.highlight-box {
-  background-color: #eef2ff;
-  border-color: #4f46e5;
+/* Цвет фона для шапки таблицы (th) */
+.grades-table th {
+  background-color: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
 }
 
-.zebra-box {
+/* Чередование цветов строк с помощью :nth-child (четные строки) */
+.grades-table tbody tr:nth-child(even) {
   background-color: #f8fafc;
 }
 
-.merged-box {
-  background-color: #f1f5f9;
+/* Выделение отдельной строки другим цветом (.highlight-row) */
+.grades-table tr.highlight-row {
+  background-color: #fef3c7 !important; /* Светло-желтый акцент */
 }
 
-/* --------------------------------------------------------------------------
-   PART 2: FEEDBACK FORM STYLING
-   -------------------------------------------------------------------------- */
-.form-section-wrap {
-  padding: 3rem 2rem;
-}
-
-.form-header-box {
-  text-align: center;
-  margin-bottom: 2.25rem;
-}
-
-.badge-pill {
-  display: inline-block;
-  background-color: #eef2ff;
-  color: #4f46e5;
-  font-size: 0.8rem;
-  font-weight: 700;
-  padding: 0.25rem 0.8rem;
-  border-radius: 9999px;
-  margin-bottom: 0.5rem;
-}
-
-#feedback-form-title {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.85rem;
-  color: #0f172a;
-  margin-bottom: 0.4rem;
-}
-
-.form-desc {
-  color: #64748b;
-  font-size: 0.95rem;
-}
-
-/* Required: Center the form on the page with a fixed width, bg color, padding, rounded corners */
-.styled-feedback-form {
-  max-width: 580px; /* Fixed / Max width */
-  margin: 0 auto; /* Centered horizontally on the page */
-  background-color: #ffffff; /* Background color */
-  border: 1px solid #e2e8f0;
-  border-radius: 14px; /* Rounded corners */
-  padding: 2.25rem; /* Padding for container */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-}
-
-/* Form group with consistent spacing */
-.form-group {
-  margin-bottom: 1.4rem;
-}
-
-/* Style labels with bold text */
-.form-label {
-  display: block;
-  font-weight: 700; /* Bold text for labels */
+/* Объединенная ячейка кафедры (rowspan) */
+.dept-cell {
+  background-color: #ffffff;
+  font-weight: 600;
   color: #1e293b;
-  margin-bottom: 0.5rem;
-  font-size: 0.92rem;
 }
 
-.req {
-  color: #ef4444;
+/* Строка с итогом (colspan) */
+.summary-row {
+  background-color: #e2e8f0;
+  font-weight: bold;
 }
 
-/* Style input fields, textarea, and dropdown with consistent width and spacing */
-.form-control {
-  width: 100%; /* Consistent width */
-  padding: 0.75rem 1rem;
-  font-size: 0.95rem;
+/* ==========================================================================
+   PART 2: FORM STYLING (Стилизация формы обратной связи)
+   ========================================================================== */
+
+/* Требование: Заголовок формы с ID селектором */
+#form-heading {
+  color: #0f172a;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+/* Требование: Центрирование формы на странице с фиксированной/макс шириной */
+#feedback-form {
+  max-width: 520px;
+  margin: 0 auto;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px; /* Скругленные углы контейнера формы */
+  padding: 25px;       /* Внутренние отступы контейнера */
+}
+
+.form-group {
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+/* Требование: Жирные метки полей (<label>) */
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #1e293b;
+  font-size: 14px;
+}
+
+.required {
+  color: #dc2626;
+}
+
+/* Требование: Одинаковая ширина и отступы для полей ввода, селекта и текста */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  font-size: 14px;
   font-family: inherit;
   color: #1e293b;
-  background-color: #f8fafc;
-  border: 1.5px solid #cbd5e1;
-  border-radius: 8px;
-  transition: all 0.2s ease;
-  outline: none;
-}
-
-.form-control:focus {
   background-color: #ffffff;
-  border-color: #4f46e5;
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
 }
 
-.form-select {
-  cursor: pointer;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2364748b'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 1rem center;
-  background-size: 1.25rem;
-  appearance: none;
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #2563eb;
 }
 
-.form-textarea {
+textarea {
   resize: vertical;
-  min-height: 100px;
 }
 
-/* Radio button styling */
-.radio-options-row {
-  display: flex;
-  gap: 1.5rem;
-  margin-top: 0.35rem;
+/* Радиокнопки (Yes/No) */
+.radio-group {
+  margin-top: 6px;
 }
 
 .radio-label {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  cursor: pointer;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: #334155;
-}
-
-.form-radio {
-  accent-color: #4f46e5;
-  width: 18px;
-  height: 18px;
+  display: inline-block;
+  font-weight: normal !important;
+  margin-right: 20px;
   cursor: pointer;
 }
 
-/* Style the submit button with background color, hover effect, and rounded corners */
-.form-submit-wrap {
-  margin-top: 1.75rem;
+.radio-label input {
+  margin-right: 5px;
+  vertical-align: middle;
 }
 
-.submit-button {
+/* Требование: Кнопка отправки со скругленными углами, цветом фона и hover */
+.btn-submit {
   width: 100%;
-  padding: 0.85rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: inherit;
+  background-color: #2563eb;
   color: #ffffff;
-  background-color: #4f46e5; /* Background color */
-  border: 1px solid #4338ca;
-  border-radius: 8px; /* Rounded corners */
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
-  transition: all 0.25s ease;
+  margin-top: 10px;
 }
 
-/* Hover effect on submit button */
-.submit-button:hover {
-  background-color: #4338ca;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(79, 70, 229, 0.45);
+.btn-submit:hover {
+  background-color: #1d4ed8;
 }
 
-.submit-button:active {
-  transform: translateY(0);
-}
-
-/* Footer styling */
-.footer-wrap {
-  background-color: #0f172a;
-  color: #94a3b8;
-  padding: 2rem 1.5rem;
+/* 4. Подвал страницы */
+.page-footer {
   text-align: center;
-  border-top: 1px solid #1e293b;
-  margin-top: 4rem;
-}
-
-.footer-inner p {
-  margin-bottom: 0.35rem;
-  font-size: 0.9rem;
-}
-
-.footer-inner strong {
-  color: #f1f5f9;
-}
-
-.footer-note {
   color: #64748b;
-  font-size: 0.82rem;
+  font-size: 14px;
+  padding: 25px 0;
+  border-top: 1px solid #e2e8f0;
 }

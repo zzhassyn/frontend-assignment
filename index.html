@@ -3,153 +3,105 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Assignment 1 | Task 1 - Introduction to HTML &amp; CSS</title>
+  <title>Assignment 1 | Task 1 - Personal Webpage</title>
   <link rel="stylesheet" href="styles.css">
-  <!-- Modern Google Font for sleek typography -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Top Global Navigation Bar linking all assignment tasks -->
+  <!-- 1. Top Navigation Bar linking all tasks (ID Selector: #main-header) -->
   <header id="main-header">
     <div class="nav-container">
-      <div class="brand-logo">
-        <span class="logo-badge">AITU</span>
-        <span class="brand-title">Frontend Lab</span>
-      </div>
+      <div class="logo">AITU <span>Frontend Lab</span></div>
       <nav class="navbar">
-        <a href="index.html" class="nav-link active">Task 1: Intro &amp; Profile</a>
-        <a href="task2.html" class="nav-link">Task 2: Float Layout</a>
-        <a href="exercise1/index.html" class="nav-link">Task 3: Tribute Page</a>
-        <a href="task4.html" class="nav-link">Task 4: Table &amp; Form</a>
-        <a href="task5.html" class="nav-link">Task 5: Midterm Wireframes</a>
+        <a href="index.html" class="active">Task 1: Intro &amp; Profile</a>
+        <a href="task2.html">Task 2: Float Layout</a>
+        <a href="exercise1/index.html">Task 3: Tribute Page</a>
+        <a href="task4.html">Task 4: Tables &amp; Forms</a>
+        <a href="task5.html">Task 5: Midterm Wireframes</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero / Introduction Banner using ID Selector -->
-  <section id="hero-banner">
-    <div class="container">
-      <span class="badge-pill">Assignment #1 &bull; HTML &amp; CSS Fundamentals</span>
-      <h1 class="main-title">Introduction to Web Development</h1>
-      <p class="hero-desc">
-        Welcome to our comprehensive web development assignment repository. This platform demonstrates mastery of modern HTML5 semantic structure, clean CSS styling rules, cascade hierarchy, and responsive layout patterns developed by our student team at Astana IT University.
-      </p>
-      <p class="hero-subtext">
-        Cascading Style Sheets (CSS) allow developers to transform plain document outlines into engaging, accessible, and interactive digital experiences by controlling typography, color harmonies, spacing geometry, and visual hierarchy.
-      </p>
-      <div class="hero-actions">
-        <a href="#profile-section" class="btn btn-primary">View Student Profile</a>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">MDN HTML Docs ↗</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Main Content Container -->
+  <!-- 2. Main Content Container -->
   <main class="container">
 
-    <!-- Profile Card Section -->
-    <section id="profile-section" class="profile-section">
-      <div class="section-heading-wrap">
-        <h2 class="section-title">Student Profile &amp; Team Information</h2>
-        <p class="section-subtitle">Individual Profile Card featuring team members and academic credentials</p>
-      </div>
-
-      <div class="profile-card">
-        <div class="avatar-wrapper">
-          <img src="images/avatar.svg" alt="Portrait illustration of Zhassyn Zhalynuly" class="profile-avatar">
-          <span class="status-indicator" title="Active Student"></span>
-        </div>
-        
-        <div class="profile-details">
-          <div class="profile-badge-row">
-            <span class="role-tag">Lead Student &bull; Software Engineering</span>
-            <span class="group-tag">Astana IT University</span>
-          </div>
-
-          <h2 class="profile-name">Zhassyn Zhalynuly</h2>
-          <p class="profile-bio">
-            Passionate software engineering undergraduate specializing in frontend architectures, user interface design, and clean web engineering. Working in close collaboration with team partners to engineer reliable, high-performance web systems.
-          </p>
-
-          <div class="group-box">
-            <h3 class="group-heading">Assignment Group Members (3 Participants):</h3>
-            <ul class="group-members-list">
-              <li><strong>1. Zhassyn Zhalynuly</strong> &mdash; <em>(Author &amp; Frontend Development)</em></li>
-              <li><strong>2. Mardan Khalilov</strong> &mdash; <em>(Team Partner &amp; UI/UX Co-author)</em></li>
-              <li><strong>3. Raiymbek Maksotov</strong> &mdash; <em>(Team Partner &amp; Fullstack Contributor)</em></li>
-            </ul>
-          </div>
-
-          <div class="profile-links">
-            <a href="https://github.com/zzhassyn" target="_blank" rel="noopener noreferrer" class="social-link">GitHub Profile ↗</a>
-            <a href="https://astanait.edu.kz" target="_blank" rel="noopener noreferrer" class="social-link">Astana IT University Portal ↗</a>
-          </div>
-        </div>
+    <!-- Hero / Introduction Section (ID Selector: #hero) -->
+    <section id="hero">
+      <h1>Introduction to Web Development</h1>
+      <p>
+        Welcome to our web development laboratory work for Astana IT University! This webpage demonstrates the core fundamentals of HTML5 structure, semantic elements, and clean CSS styling rules.
+      </p>
+      <p>
+        Cascading Style Sheets (CSS) allow us to separate the content of a document from its visual presentation. By using CSS, we can control colors, typography, margins, padding, borders, and responsive page layouts.
+      </p>
+      <div class="hero-links">
+        <a href="#profile" class="btn">View Profile Card</a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer">MDN Web Docs &rarr;</a>
       </div>
     </section>
 
-    <!-- Detailed Learning Goals & Technology Lists Section -->
-    <section class="lists-showcase-section">
-      <div class="grid-two-columns">
-        
-        <!-- Ordered List (ol) with at least 4 items -->
-        <div class="list-card">
-          <div class="list-header">
-            <span class="list-icon">🎯</span>
-            <h2 class="list-title">My Web Development Milestones</h2>
-          </div>
-          <p class="list-intro">
-            A chronological roadmap of key competencies mastered during this introductory phase of web engineering:
-          </p>
-          <ol class="custom-ordered-list">
-            <li><strong>Mastering HTML Document Semantics:</strong> Structuring content logically with native HTML5 semantic tags (<code class="inline-code">&lt;header&gt;</code>, <code class="inline-code">&lt;main&gt;</code>, <code class="inline-code">&lt;footer&gt;</code>).</li>
-            <li><strong>CSS Cascade &amp; Selectors Architecture:</strong> Implementing elemental, class-based, ID-specific, and pseudo-class selector hierarchies without collisions.</li>
-            <li><strong>The CSS Box Model Geometry:</strong> Precision calculation and styling of content width, internal padding, border borders, and external margins.</li>
-            <li><strong>Visual Styling &amp; Typography:</strong> Integrating web fonts, curating accessible color contrast ratios, and crafting micro-interactions with hover states.</li>
-            <li><strong>Production Deployment via GitHub Pages:</strong> Publishing static production repositories directly to the cloud for global accessibility.</li>
-          </ol>
-        </div>
+    <!-- Student Profile Card Section (ID Selector: #profile) -->
+    <section id="profile" class="profile-card">
+      <h2>Student Profile</h2>
+      <img src="images/avatar.svg" alt="Photo of Zhassyn Zhalynuly" class="profile-img">
+      
+      <h3>Zhassyn Zhalynuly</h3>
+      <p class="group-info"><strong>Group:</strong> SE-24 &bull; Astana IT University</p>
+      <p class="description">
+        Software engineering undergraduate student specializing in web technologies and user interface development. Working collaboratively with team partners on modern web engineering solutions.
+      </p>
 
-        <!-- Unordered List (ul) with at least 4 items -->
-        <div class="list-card">
-          <div class="list-header">
-            <span class="list-icon">⚡</span>
-            <h2 class="list-title">Core Web Technologies &amp; Tools</h2>
-          </div>
-          <p class="list-intro">
-            Essential technologies, tools, and best practices utilized throughout this assignment:
-          </p>
-          <ul class="custom-unordered-list">
-            <li><strong>HTML5 Living Standard:</strong> Semantic containers, accessible media attributes, and structured forms.</li>
-            <li><strong>Pure Vanilla CSS3:</strong> Custom properties (CSS variables), box-sizing calculations, and transition micro-effects.</li>
-            <li><strong>Git &amp; Version Control:</strong> Atomic commits, branch workflows, and remote synchronization via GitHub.</li>
-            <li><strong>Vector Scalable Graphics (SVG):</strong> High-definition, lightweight, resolution-independent vector illustrations.</li>
-            <li><strong>Responsive Web Principles:</strong> Fluid viewport design ensuring seamless readability on mobile, tablet, and desktop viewports.</li>
-          </ul>
-        </div>
+      <div class="team-box">
+        <h4>Assignment Team Members (Group of 3):</h4>
+        <ul class="team-list">
+          <li><strong>1. Zhassyn Zhalynuly</strong> &mdash; Team Lead, Task 1 &amp; Task 4</li>
+          <li><strong>2. Mardan Khalilov</strong> &mdash; UI/UX &amp; Wireframes, Task 2 &amp; Task 5</li>
+          <li><strong>3. Raiymbek Maksotov</strong> &mdash; Fullstack &amp; Documentation, Task 3</li>
+        </ul>
+      </div>
 
+      <div class="profile-links">
+        <a href="https://github.com/zzhassyn" target="_blank" rel="noopener noreferrer">GitHub Profile &rarr;</a>
+        <a href="https://astanait.edu.kz" target="_blank" rel="noopener noreferrer">Astana IT University &rarr;</a>
+      </div>
+    </section>
+
+    <!-- Lists Section: Ordered List & Unordered List -->
+    <section class="lists-section">
+      <div class="list-card">
+        <h2>Web Development Milestones (Ordered List)</h2>
+        <p>A chronological roadmap of key competencies mastered in this lab:</p>
+        <ol>
+          <li>Understanding HTML document structure and semantic tags</li>
+          <li>Learning CSS selectors: element, class, and ID rules</li>
+          <li>Mastering the CSS Box Model: margin, border, padding, and content</li>
+          <li>Building responsive layouts for different screen resolutions</li>
+          <li>Publishing the repository to GitHub Pages</li>
+        </ol>
+      </div>
+
+      <div class="list-card">
+        <h2>Core Technologies &amp; Tools (Unordered List)</h2>
+        <p>Essential technologies and tools used in this assignment:</p>
+        <ul>
+          <li><strong>HTML5:</strong> Semantic containers, accessible media, lists, and forms</li>
+          <li><strong>CSS3:</strong> Box model, color schemes, typography, and hover effects</li>
+          <li><strong>Git &amp; GitHub:</strong> Version control, commits, and web hosting</li>
+          <li><strong>Visual Studio Code:</strong> Code editing and live server debugging</li>
+          <li><strong>Vector Graphics (SVG):</strong> Clean and scalable graphic assets</li>
+        </ul>
       </div>
     </section>
 
   </main>
 
-  <!-- Global Footer with ID selector -->
+  <!-- 3. Global Footer (ID Selector: #main-footer) -->
   <footer id="main-footer">
-    <div class="container footer-content">
-      <p class="footer-copy">
-        &copy; 2026 <strong>Zhassyn Zhalynuly</strong>, <strong>Mardan Khalilov</strong>, <strong>Raiymbek Maksotov</strong> &bull; Assignment #1 Frontend Lab.
-      </p>
-      <div class="footer-links">
-        <a href="index.html">Task 1</a>
-        <a href="task2.html">Task 2</a>
-        <a href="exercise1/index.html">Task 3</a>
-        <a href="task4.html">Task 4</a>
-        <a href="task5.html">Task 5</a>
-      </div>
-    </div>
+    <p>&copy; 2026 Zhassyn Zhalynuly, Mardan Khalilov, Raiymbek Maksotov &bull; Assignment #1 Frontend Lab</p>
   </footer>
 
 </body>
