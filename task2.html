@@ -4,24 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Assignment 1 | Task 2 - CSS Float Layout</title>
-  <link rel="stylesheet" href="task2.css">
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/task2.css">
 </head>
 <body>
 
-  <!-- Outer Page Wrapper (Общий контейнер страницы на <div>) -->
+  <!-- Outer Page Wrapper (Только теги <div> для разметки) -->
   <div class="page-container">
 
-    <!-- 1. Header Section (Шапка сайта) -->
+    <!-- 1. Header -->
     <div class="header">
       <h1>Astana IT University &bull; Frontend Web Engineering</h1>
       <p>Task 2: Page Layout using &lt;div&gt; + Floats &amp; Positioning (Zero Flexbox / Zero Grid)</p>
     </div>
 
-    <!-- 2. Navigation Bar (Навигационная панель с ссылками на задания) -->
+    <!-- 2. Navigation Bar -->
     <div class="navbar">
       <a href="index.html">Task 1: Intro &amp; Profile</a>
       <a href="task2.html" class="active">Task 2: Float Layout</a>
@@ -30,60 +26,59 @@
       <a href="task5.html">Task 5: Midterm Wireframes</a>
     </div>
 
-    <!-- 3. Middle Two-Column Section (Контейнер с двумя колонками на float) -->
+    <!-- 3. Middle Section -->
     <div class="main-content">
 
       <!-- Left Column: Sidebar Menu (float: left) -->
       <div class="sidebar">
         <h3>Sidebar Menu</h3>
         <ul>
-          <li><a href="#about-floats">1. CSS Float Mechanism</a></li>
+          <li><a href="#about-floats">1. CSS Float Concept</a></li>
           <li><a href="#clearfix-info">2. Clearfix Technique</a></li>
-          <li><a href="#positioning-rules">3. Positioning Paradigms</a></li>
-          <li><a href="#team-credits">4. Team Contributors</a></li>
+          <li><a href="#team-info">3. Assignment Team</a></li>
         </ul>
 
         <div class="sidebar-box">
-          <h4>Layout Notice</h4>
-          <p>This page is engineered strictly using traditional <code>float: left</code>, <code>float: right</code>, and <code>clear: both</code>.</p>
+          <strong>Notice:</strong>
+          <p>Built with traditional <code>float: left</code>, <code>float: right</code>, and <code>clear: both</code>.</p>
         </div>
       </div>
 
-      <!-- Right Column: Main Content / Aside (float: right) -->
+      <!-- Right Column: Main Content (float: right) -->
       <div class="content">
         
-        <div id="about-floats" class="content-box">
+        <div id="about-floats">
           <h2>Understanding CSS Float &amp; Clear Properties</h2>
           <p>
-            Before modern CSS Flexbox and Grid were standardized, web developers relied entirely on the <code>float</code> property to create multi-column website layouts. Originally designed to let text wrap around images, floating an element takes it out of normal block flow and shifts it to the left or right edge of its parent.
+            The <code>float</code> property was historically used to create multi-column website layouts before Flexbox and Grid existed. Floating an element moves it to the left or right edge of its parent container, allowing adjacent text to wrap around it.
           </p>
           <p>
-            When two adjacent block elements are floated (one left and one right), they sit side by side horizontally. This created the classic two-column and three-column website designs of the early web.
+            By floating one block to the left (<code>float: left</code>) and another block to the right (<code>float: right</code>), we can create a two-column sidebar layout.
           </p>
         </div>
 
-        <div id="clearfix-info" class="content-box">
+        <div id="clearfix-info">
           <h2>The Role of Clearfix (clear: both)</h2>
           <p>
-            Because floated children are taken out of the standard layout flow, their parent container cannot measure their height. Without a clear mechanism, the parent collapses to zero height.
+            When elements are floated, they are removed from the normal document flow. Because of this, the parent container does not automatically detect their height and can collapse.
           </p>
           <p>
-            To prevent collapse, we place a divider with <code>clear: both;</code> immediately below the floated columns, forcing the parent to fully enclose them.
+            To fix this, we insert a divider element with <code>clear: both;</code> right after the floated columns, forcing the parent to encompass both columns.
           </p>
         </div>
 
-        <div id="team-credits" class="content-box note-box">
-          <strong>Assignment Group Members:</strong> Zhassyn Zhalynuly, Mardan Khalilov, Raiymbek Maksotov &bull; SE-24 Astana IT University.
+        <div id="team-info" class="team-note">
+          <strong>Group Assignment #1:</strong> Zhassyn Zhalynuly, Mardan Khalilov, Raiymbek Maksotov &bull; SE-24.
         </div>
 
       </div>
 
-      <!-- Clearfix Element: очистка обтекания для предотвращения схлопывания -->
+      <!-- Clearfix: предотвращает схлопывание родительского блока -->
       <div class="clearfix"></div>
 
     </div>
 
-    <!-- 4. Footer Section (Подвал сайта) -->
+    <!-- 4. Footer -->
     <div class="footer">
       <p>&copy; 2026 Zhassyn Zhalynuly, Mardan Khalilov, Raiymbek Maksotov &bull; Assignment #1 Float Layout</p>
     </div>

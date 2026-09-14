@@ -1,0 +1,170 @@
+/* ==========================================================================
+   TASK 1: INTRODUCTION TO HTML & CSS (BEGINNER STYLE)
+   Authors: Zhassyn Zhalynuly, Mardan Khalilov, Raiymbek Maksotov
+   ========================================================================== */
+
+/* 1. Селекторы элементов (Element Selectors) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333333;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  margin-bottom: 10px;
+  color: #222222;
+}
+
+p {
+  margin-bottom: 12px;
+}
+
+/* Ссылки и эффект наведения :hover */
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/* Списки */
+ol, ul {
+  margin-left: 25px;
+  margin-bottom: 15px;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+/* 2. Селекторы по ID (ID Selectors) */
+#main-header {
+  background-color: #333333;
+  color: #ffffff;
+  padding: 15px 10px;
+  text-align: center;
+}
+
+#hero {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#profile {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#main-footer {
+  background-color: #333333;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/* 3. Селекторы классов (Class Selectors) */
+.container {
+  width: 85%;
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+/* Навигация */
+.navbar {
+  margin-top: 10px;
+}
+
+.navbar a {
+  color: #ffffff;
+  margin: 0 5px;
+  padding: 6px 12px;
+  display: inline-block;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #555555;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.navbar a.active {
+  background-color: #0066cc;
+  border-radius: 4px;
+}
+
+/* Кнопка */
+.btn {
+  display: inline-block;
+  background-color: #0066cc;
+  color: #ffffff !important;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.btn:hover {
+  background-color: #004499;
+  text-decoration: none;
+}
+
+/* Карточка профиля */
+.profile-img {
+  width: 120px;
+  max-width: 100%;
+  border-radius: 50%;
+  border: 3px solid #0066cc;
+  margin: 10px auto;
+  display: block;
+}
+
+.group-text {
+  color: #0066cc;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.team-box {
+  background-color: #eef4ff;
+  border: 1px solid #cbd5e1;
+  padding: 12px;
+  max-width: 450px;
+  margin: 15px auto;
+  text-align: left;
+}
+
+.team-box h4 {
+  margin-bottom: 6px;
+}
+
+.team-box ul {
+  margin-bottom: 0;
+}
+
+/* Блоки списков */
+.list-card {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  padding: 20px;
+  margin-bottom: 20px;
+}

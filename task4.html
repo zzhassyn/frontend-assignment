@@ -1,155 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Assignment 1 | Task 4 - CSS Table &amp; Form Styling</title>
-  <link rel="stylesheet" href="task4.css">
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Assignment 1 | Task 4 - CSS Table &amp; Form</title>
+  <link rel="stylesheet" href="css/task4.css">
 </head>
+
 <body>
 
-  <!-- Top Navigation Bar linking all assignment tasks -->
+  <!-- 1. Header & Navigation -->
   <header class="top-nav">
-    <div class="nav-inner">
-      <div class="logo">AITU <span>Frontend Lab</span></div>
-      <nav class="navbar">
-        <a href="index.html">Task 1: Intro &amp; Profile</a>
-        <a href="task2.html">Task 2: Float Layout</a>
-        <a href="exercise1/index.html">Task 3: Tribute Page</a>
-        <a href="task4.html" class="active">Task 4: Tables &amp; Forms</a>
-        <a href="task5.html">Task 5: Midterm Wireframes</a>
-      </nav>
+    <h1>Astana IT University &bull; Frontend Lab</h1>
+    <div class="navbar">
+      <a href="index.html">Task 1: Intro &amp; Profile</a>
+      <a href="task2.html">Task 2: Float Layout</a>
+      <a href="exercise1/index.html">Task 3: Tribute Page</a>
+      <a href="task4.html" class="active">Task 4: Tables &amp; Forms</a>
+      <a href="task5.html">Task 5: Midterm Wireframes</a>
     </div>
   </header>
 
-  <main class="page-container">
+  <main class="container">
 
     <!-- ====================================================================
          EXERCISE 1: CSS TABLE STYLING
          ==================================================================== -->
-    <section class="section-card">
-      
-      <!-- Page heading above table with an ID selector for custom styling -->
-      <h1 id="table-heading">Student Academic Grades</h1>
-      <p class="section-desc">
-        Demonstrates cell borders, cell padding, alternate row coloring via <code>:nth-child</code>, custom highlighted row via <code>.highlight-row</code>, cell merging with <code>rowspan</code> and <code>colspan</code>, and center-aligned text.
+    <section class="card">
+
+      <!-- ID Selector Requirement for Page Heading above Table -->
+      <h2 id="table-heading">Student Academic Grades Table</h2>
+      <p class="desc">
+        Demonstrates cell borders, padding, alternate row coloring via <code>:nth-child</code>, highlighted row via
+        <code>.highlight-row</code>, cell merging with <code>rowspan</code> and <code>colspan</code>, and center-aligned
+        text.
       </p>
 
-      <!-- Table Wrapper for responsive scrolling if needed -->
-      <div class="table-responsive">
-        <table class="grades-table">
-          <thead>
-            <tr>
-              <th>Department</th>
-              <th>Student Full Name</th>
-              <th>Course Subject</th>
-              <th>Assignment Score</th>
-              <th>Final Grade</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Row 1: Highlighted Row using .highlight-row class + rowspan -->
-            <tr class="highlight-row">
-              <td rowspan="3" class="dept-cell">Computer Science &amp; SE</td>
-              <td><strong>Zhassyn Zhalynuly</strong> (Lead)</td>
-              <td>Frontend Technologies</td>
-              <td>98 / 100</td>
-              <td><strong>A+</strong></td>
-              <td>Passed</td>
-            </tr>
-            
-            <!-- Row 2: Alternating row (even) -->
-            <tr>
-              <td><strong>Mardan Khalilov</strong></td>
-              <td>Frontend Technologies</td>
-              <td>95 / 100</td>
-              <td><strong>A</strong></td>
-              <td>Passed</td>
-            </tr>
-            
-            <!-- Row 3: Alternating row (odd) -->
-            <tr>
-              <td><strong>Raiymbek Maksotov</strong></td>
-              <td>Frontend Technologies</td>
-              <td>96 / 100</td>
-              <td><strong>A</strong></td>
-              <td>Passed</td>
-            </tr>
+      <table class="grades-table">
+        <thead>
+          <tr>
+            <th>Department</th>
+            <th>Student Full Name</th>
+            <th>Course Subject</th>
+            <th>Score</th>
+            <th>Grade</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Row 1: Highlighted Row using .highlight-row class + rowspan -->
+          <tr class="highlight-row">
+            <td rowspan="3">Computer Science</td>
+            <td><strong>Zhassyn Zhalynuly</strong></td>
+            <td>Frontend Web Technologies</td>
+            <td>96 / 100</td>
+            <td>A</td>
+            <td>Passed</td>
+          </tr>
 
-            <!-- Row 4: Summary row demonstrating colspan -->
-            <tr class="summary-row">
-              <td colspan="3"><strong>Group 1 Average Score:</strong></td>
-              <td colspan="3"><strong>96.3% &bull; Grade: A (Outstanding Distinction)</strong></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+          <!-- Row 2: Alternating row (even) -->
+          <tr>
+            <td><strong>Mardan Khalilov</strong></td>
+            <td>Frontend Web Technologies</td>
+            <td>96 / 100</td>
+            <td>A</td>
+            <td>Passed</td>
+          </tr>
+
+          <!-- Row 3: Alternating row (odd) -->
+          <tr>
+            <td><strong>Raiymbek Maksotov</strong></td>
+            <td>Frontend Web Technologies</td>
+            <td>96 / 100</td>
+            <td>A</td>
+            <td>Passed</td>
+          </tr>
+
+          <!-- Row 4: Summary row demonstrating colspan -->
+          <tr class="summary-row">
+            <td colspan="3">Group 1 Overall Average:</td>
+            <td colspan="3">96% &bull; Grade: A (Distinction)</td>
+          </tr>
+        </tbody>
+      </table>
 
     </section>
 
     <!-- ====================================================================
          EXERCISE 2: FEEDBACK FORM STYLING
          ==================================================================== -->
-    <section class="section-card">
+    <section class="card">
 
       <!-- Form Heading with ID Selector -->
-      <h2 id="form-heading">Course &amp; Lab Feedback Form</h2>
-      <p class="section-desc">
-        Please share your feedback regarding the HTML and CSS course assignments.
+      <h2 id="form-heading">Course Feedback Form</h2>
+      <p class="desc">
+        Please submit your feedback regarding the lab exercises.
       </p>
 
-      <!-- Centered form container with ID and Class -->
-      <form id="feedback-form" class="feedback-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you! Feedback received successfully.');">
+      <!-- Centered form container with ID selector -->
+      <form id="feedback-form" action="#" method="POST"
+        onsubmit="event.preventDefault(); alert('Feedback submitted successfully!');">
 
         <!-- 1. Text input for Name -->
         <div class="form-group">
-          <label for="student-name">Full Name: <span class="required">*</span></label>
+          <label for="student-name">Full Name:</label>
           <input type="text" id="student-name" name="name" placeholder="e.g. Zhassyn Zhalynuly" required>
         </div>
 
         <!-- 2. Email input for Email Address -->
         <div class="form-group">
-          <label for="student-email">Email Address: <span class="required">*</span></label>
+          <label for="student-email">Email Address:</label>
           <input type="email" id="student-email" name="email" placeholder="e.g. student@astanait.edu.kz" required>
         </div>
 
         <!-- 3. Select dropdown for Role -->
         <div class="form-group">
-          <label for="user-role">Academic Role: <span class="required">*</span></label>
+          <label for="user-role">Academic Role:</label>
           <select id="user-role" name="role" required>
             <option value="" disabled selected>-- Select your role --</option>
             <option value="Student">Student</option>
             <option value="Teacher">Teacher / Instructor</option>
-            <option value="Other">Other / Teaching Assistant</option>
+            <option value="Other">Other</option>
           </select>
         </div>
 
         <!-- 4. Radio buttons for Yes/No question -->
         <div class="form-group">
-          <label>Would you recommend this web development course? <span class="required">*</span></label>
+          <label>Would you recommend this course?</label>
           <div class="radio-group">
-            <label class="radio-label">
-              <input type="radio" name="recommend" value="Yes" checked> Yes, definitely!
+            <label>
+              <input type="radio" name="recommend" value="Yes" checked> Yes
             </label>
-            <label class="radio-label">
-              <input type="radio" name="recommend" value="No"> No, needs improvement
+            <label>
+              <input type="radio" name="recommend" value="No"> No
             </label>
           </div>
         </div>
 
         <!-- 5. Textarea for Comments -->
         <div class="form-group">
-          <label for="feedback-comments">Comments &amp; Suggestions:</label>
-          <textarea id="feedback-comments" name="comments" rows="4" placeholder="Share your thoughts on the lab exercises and CSS styling..."></textarea>
+          <label for="feedback-comments">Comments:</label>
+          <textarea id="feedback-comments" name="comments" rows="4"
+            placeholder="Enter your comments here..."></textarea>
         </div>
 
         <!-- 6. Submit Button -->
-        <button type="submit" id="btn-submit" class="btn-submit">Submit Feedback</button>
+        <button type="submit" class="btn-submit">Submit Feedback</button>
 
       </form>
 
@@ -157,9 +154,10 @@
 
   </main>
 
-  <footer class="page-footer">
+  <footer class="footer">
     <p>&copy; 2026 Zhassyn Zhalynuly, Mardan Khalilov, Raiymbek Maksotov &bull; Assignment #1 Task 4</p>
   </footer>
 
 </body>
+
 </html>

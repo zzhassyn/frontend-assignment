@@ -5,98 +5,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tribute Page: Alan Turing (1912 – 1954)</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../css/task3.css">
   
   <!-- Step 4 requirement: Link at least two Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Navigation Bar linking all assignment tasks -->
-  <nav class="assignment-nav">
-    <div class="nav-inner">
-      <span class="nav-brand">AITU Frontend Lab</span>
-      <div class="nav-links">
-        <a href="../index.html">Task 1: Intro &amp; Profile</a>
-        <a href="../task2.html">Task 2: Float Layout</a>
-        <a href="index.html" class="active">Task 3: Tribute Page</a>
-        <a href="../task4.html">Task 4: Tables &amp; Forms</a>
-        <a href="../task5.html">Task 5: Midterm Wireframes</a>
-      </div>
-    </div>
-  </nav>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <a href="../index.html">Task 1: Intro &amp; Profile</a>
+    <a href="../task2.html">Task 2: Float Layout</a>
+    <a href="index.html" class="active">Task 3: Tribute Page</a>
+    <a href="../task4.html">Task 4: Tables &amp; Forms</a>
+    <a href="../task5.html">Task 5: Midterm Wireframes</a>
+  </div>
 
-  <!-- Step 1 & Step 4: Header (background color, text color, padding, center alignment) -->
+  <!-- Step 1 & Step 4: Header -->
   <header class="tribute-header">
-    <h1 class="tribute-title">Alan Mathison Turing</h1>
-    <h3 class="tribute-tagline">1912 &ndash; 1954 &bull; Father of Modern Computer Science &amp; Artificial Intelligence</h3>
+    <h1>Alan Mathison Turing</h1>
+    <p>1912 &ndash; 1954 &bull; Father of Modern Computer Science</p>
   </header>
 
-  <!-- Step 4: .content container (max-width, margin: 0 auto, padding) -->
+  <!-- Step 4: .content container -->
   <main class="content">
 
-    <!-- Step 3: Portrait using <img> with descriptive alt attribute -->
+    <!-- Step 3: Portrait using <img> with alt -->
     <div class="image-box">
-      <img src="../images/alan_turing.svg" alt="Portrait illustration of Alan Turing" class="tribute-img">
-      <p class="img-caption">Alan Turing &mdash; British mathematician, logician, and cryptanalyst.</p>
+      <img src="../images/alan_turing.svg" alt="Photo illustration of Alan Turing" class="tribute-img">
+      <p class="caption">Alan Turing &mdash; British mathematician and logician</p>
     </div>
 
-    <!-- Step 1: Subheading <h2> and short paragraph (3-5 sentences) -->
-    <section class="bio-section">
+    <!-- Step 1: Subheading <h2> and paragraph (3-5 sentences) -->
+    <section class="bio-box">
       <h2>About Alan Turing</h2>
       <p>
-        Alan Mathison Turing (born June 23, 1912 – died June 7, 1954) was an English mathematician, computer scientist, and cryptanalyst who played a pivotal role in cracking intercepted coded messages during World War II. At Bletchley Park, he designed the electromechanical Bombe machine to break the German Enigma cipher, which saved millions of lives and shortened the conflict in Europe. In theoretical computer science, he introduced the concept of the universal Turing Machine in 1936, providing the fundamental mathematical model for modern general-purpose digital computers. Furthermore, he formulated the influential Turing Test in 1950, which remains one of the cornerstone benchmarks for evaluating machine intelligence and artificial intelligence.
+        Alan Mathison Turing (1912 – 1954) was an English mathematician, computer scientist, and cryptanalyst who made foundational contributions to theoretical computer science. During World War II, Turing worked at Bletchley Park, where he played a central role in breaking intercepted coded messages using the electromechanical Bombe machine. His work on breaking the German Enigma ciphers helped save millions of lives. In 1936, he invented the universal Turing Machine, which is considered the fundamental model of modern computers. In 1950, he formulated the Turing Test, a famous benchmark to evaluate whether a computer is capable of human-like thinking.
       </p>
     </section>
 
-    <!-- Step 2: HTML Lists (Ordered list & Unordered list) -->
-    <section class="lists-section">
-      
-      <!-- Ordered List: 4-6 important chronological events -->
-      <div class="list-block">
-        <h3>Important Life Events (Chronological)</h3>
-        <ol class="events-list">
-          <li><strong>1912:</strong> Born in London, England.</li>
-          <li><strong>1934:</strong> Graduated with first-class honors in mathematics from King's College, Cambridge.</li>
-          <li><strong>1936:</strong> Published seminal paper on universal computing machines ("On Computable Numbers").</li>
-          <li><strong>1939–1945:</strong> Worked as lead cryptanalyst at Bletchley Park, breaking Axis Enigma ciphers.</li>
-          <li><strong>1950:</strong> Proposed the famous Turing Test for artificial machine intelligence.</li>
-          <li><strong>1954:</strong> Passed away in Wilmslow, Cheshire, leaving a timeless scientific legacy.</li>
-        </ol>
-      </div>
-
-      <!-- Unordered List: Key inventions/contributions -->
-      <div class="list-block">
-        <h3>Key Inventions &amp; Contributions</h3>
-        <ul class="inventions-list">
-          <li><strong>The Universal Turing Machine (UTM):</strong> The theoretical blueprint for modern computers.</li>
-          <li><strong>The Cryptanalytic Bombe:</strong> Electromechanical device that automated Enigma codebreaking.</li>
-          <li><strong>The Turing Test:</strong> Foundational benchmark inquiring whether machines can exhibit human-like thought.</li>
-          <li><strong>Automatic Computing Engine (ACE):</strong> Early stored-program digital computer design.</li>
-          <li><strong>Morphogenesis Theory:</strong> Mathematical framework explaining pattern formation in living organisms.</li>
-        </ul>
-      </div>
-
+    <!-- Step 2: Lists (<ol> and <ul>) -->
+    <section class="list-box">
+      <h3>Chronological Milestones (Ordered List)</h3>
+      <ol class="events-list">
+        <li><strong>1912:</strong> Born in London, England.</li>
+        <li><strong>1934:</strong> Graduated in mathematics from King's College, Cambridge.</li>
+        <li><strong>1936:</strong> Published paper introducing the universal Turing Machine.</li>
+        <li><strong>1939–1945:</strong> Worked as lead cryptanalyst at Bletchley Park breaking Enigma codes.</li>
+        <li><strong>1950:</strong> Proposed the Turing Test for machine intelligence.</li>
+        <li><strong>1954:</strong> Passed away in Cheshire, England.</li>
+      </ol>
     </section>
 
-    <!-- Step 3: Clickable links + "Learn more" button linking to Wikipedia -->
-    <section class="links-section">
+    <section class="list-box">
+      <h3>Key Inventions &amp; Contributions (Unordered List)</h3>
+      <ul class="inventions-list">
+        <li><strong>The Universal Turing Machine:</strong> Theoretical model for modern programmable computers.</li>
+        <li><strong>The Bombe Machine:</strong> Electro-mechanical device that cracked Enigma ciphers.</li>
+        <li><strong>The Turing Test:</strong> Famous test to determine whether a machine exhibits intelligence.</li>
+        <li><strong>Automatic Computing Engine (ACE):</strong> Early digital stored-program computer.</li>
+        <li><strong>Morphogenesis Theory:</strong> Mathematical biology models of patterns in nature.</li>
+      </ul>
+    </section>
+
+    <!-- Step 3: Clickable links + "Learn more" button -->
+    <section class="links-box">
       <h3>Learn More About Alan Turing</h3>
-      <p>Explore external resources and authoritative historical archives:</p>
-      
-      <div class="links-buttons">
-        <a href="https://en.wikipedia.org/wiki/Alan_Turing" target="_blank" rel="noopener noreferrer" class="btn">Learn more on Wikipedia &rarr;</a>
-        <a href="https://www.turing.ac.uk" target="_blank" rel="noopener noreferrer" class="link-item">The Alan Turing Institute &rarr;</a>
-        <a href="https://bletchleypark.org.uk" target="_blank" rel="noopener noreferrer" class="link-item">Bletchley Park Heritage Trust &rarr;</a>
+      <p>Click the links below to read historical archives:</p>
+      <div>
+        <a href="https://en.wikipedia.org/wiki/Alan_Turing" target="_blank" class="btn">Learn more on Wikipedia &rarr;</a>
+        <a href="https://www.turing.ac.uk" target="_blank" class="external-link">The Alan Turing Institute &rarr;</a>
+        <a href="https://bletchleypark.org.uk" target="_blank" class="external-link">Bletchley Park Heritage Trust &rarr;</a>
       </div>
     </section>
 
   </main>
 
-  <!-- Tribute Footer -->
-  <footer class="tribute-footer">
-    <p>&copy; 2026 Zhassyn Zhalynuly, Mardan Khalilov, Raiymbek Maksotov &bull; Tribute Page Assignment</p>
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Zhassyn Zhalynuly, Mardan Khalilov, Raiymbek Maksotov &bull; Tribute Page</p>
   </footer>
 
 </body>

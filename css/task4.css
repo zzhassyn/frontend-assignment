@@ -1,0 +1,201 @@
+/* ==========================================================================
+   TASK 4: CSS TABLE & FORM STYLING (BEGINNER STYLE)
+   Authors: Zhassyn Zhalynuly, Mardan Khalilov, Raiymbek Maksotov
+   ========================================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333333;
+  line-height: 1.6;
+}
+
+/* 1. Верхнее меню навигации */
+.top-nav {
+  background-color: #333333;
+  color: #ffffff;
+  padding: 15px;
+  text-align: center;
+}
+
+.top-nav h1 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 6px 12px;
+  margin: 0 4px;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.navbar a:hover {
+  background-color: #555555;
+  border-radius: 3px;
+}
+
+.navbar a.active {
+  background-color: #0066cc;
+  border-radius: 3px;
+}
+
+/* Общий контейнер */
+.container {
+  width: 85%;
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+.desc {
+  text-align: center;
+  color: #666666;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* ==========================================================================
+   EXERCISE 1: СТИЛИ ТАБЛИЦЫ (TABLE STYLING)
+   ========================================================================== */
+
+/* ID селектор для заголовка над таблицей */
+#table-heading {
+  text-align: center;
+  color: #222222;
+  margin-bottom: 8px;
+}
+
+/* Таблица */
+.grades-table {
+  width: 100%;
+  border-collapse: collapse; /* Схлопывание двойных рамок в одинарные */
+  margin: 15px 0;
+}
+
+/* Рамки, отступы и выравнивание по центру для всех ячеек */
+.grades-table th,
+.grades-table td {
+  border: 1px solid #333333;
+  padding: 10px;
+  text-align: center; /* Текст по центру ячеек */
+  font-size: 14px;
+}
+
+/* Цвет фона шапки таблицы (th) */
+.grades-table th {
+  background-color: #0066cc;
+  color: #ffffff;
+}
+
+/* Чередование цветов строк (четные строки) с помощью :nth-child */
+.grades-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Выделение одной строки другим цветом с помощью класса .highlight-row */
+.grades-table tr.highlight-row {
+  background-color: #ffff99 !important; /* Желтый цвет выделения */
+}
+
+/* Итоговая строка (colspan) */
+.summary-row {
+  background-color: #e0e0e0;
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   EXERCISE 2: СТИЛИ ФОРМЫ (FORM STYLING)
+   ========================================================================== */
+
+/* ID селектор для заголовка формы */
+#form-heading {
+  text-align: center;
+  color: #222222;
+  margin-bottom: 8px;
+}
+
+/* Центрирование формы на странице с фиксированной шириной (ID селектор) */
+#feedback-form {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border: 1px solid #cccccc;
+  border-radius: 6px; /* Скругленные углы */
+  padding: 20px;       /* Внутренние отступы */
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/* Жирные метки (<label>) */
+.form-group label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+/* Одинаковая ширина и отступы для полей ввода, списка и текста */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+/* Радиокнопки (Yes/No) */
+.radio-group label {
+  display: inline;
+  font-weight: normal;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+/* Кнопка отправки с фоном, скруглением и hover-эффектом */
+.btn-submit {
+  width: 100%;
+  background-color: #0066cc;
+  color: #ffffff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-submit:hover {
+  background-color: #004499;
+}
+
+/* Подвал */
+.footer {
+  text-align: center;
+  padding: 15px;
+  color: #666666;
+  font-size: 14px;
+}
