@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 1 | Task 4 - CSS Table &amp; Form Styling</title>
+  <link rel="stylesheet" href="task4.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Global Header Navigation -->
+  <header class="top-nav-bar">
+    <div class="nav-container">
+      <div class="brand">
+        <span class="badge">AITU</span>
+        <span class="title">Frontend Lab</span>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Task 1: Intro &amp; Profile</a>
+        <a href="task2.html">Task 2: Float Layout</a>
+        <a href="exercise1/index.html">Task 3: Tribute Page</a>
+        <a href="task4.html" class="active">Task 4: Table &amp; Form</a>
+        <a href="task5.html">Task 5: Midterm Wireframes</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-container">
+
+    <!-- ====================================================================
+         EXERCISE 1: CSS TABLE STYLING
+         ==================================================================== -->
+    <section class="section-card">
+      
+      <!-- Required: Page heading above table with an ID selector for custom styling -->
+      <h1 id="table-custom-heading">Academic Performance &amp; Student Grades</h1>
+      <p class="section-intro">
+        Official evaluation roster for Assignment #1 participants at Astana IT University. Demonstrates cell borders, cell padding, alternate row coloring via <code class="code-tag">:nth-child()</code>, custom highlighted rows via <code class="code-tag">.highlight-row</code>, and cell merging with <code class="code-tag">colspan</code> and <code class="code-tag">rowspan</code>.
+      </p>
+
+      <div class="table-wrapper">
+        <table class="grades-table" id="student-grades-table">
+          <thead>
+            <tr>
+              <th>Department</th>
+              <th>Student Full Name</th>
+              <th>Course Subject</th>
+              <th>Assignment Score</th>
+              <th>Final Letter Grade</th>
+              <th>Academic Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Row 1: Highlighted Row using .highlight-row class -->
+            <tr class="highlight-row">
+              <td rowspan="3" class="dept-merged-cell">Computer Science &amp; SE</td>
+              <td class="student-name"><strong>Zhassyn Zhalynuly</strong> <span class="badge-tag">Team Lead</span></td>
+              <td>Frontend Web Technologies</td>
+              <td>98 / 100</td>
+              <td><strong>A+</strong></td>
+              <td><span class="status-pill status-passed">Excellent Distinction</span></td>
+            </tr>
+
+            <!-- Row 2: Alternating row (even) -->
+            <tr>
+              <td class="student-name"><strong>Mardan Khalilov</strong> <span class="badge-tag">Group Member</span></td>
+              <td>Frontend Web Technologies</td>
+              <td>95 / 100</td>
+              <td><strong>A</strong></td>
+              <td><span class="status-pill status-passed">Distinction</span></td>
+            </tr>
+
+            <!-- Row 3: Alternating row (odd) -->
+            <tr>
+              <td class="student-name"><strong>Raiymbek Maksotov</strong> <span class="badge-tag">Group Member</span></td>
+              <td>Frontend Web Technologies</td>
+              <td>96 / 100</td>
+              <td><strong>A</strong></td>
+              <td><span class="status-pill status-passed">Distinction</span></td>
+            </tr>
+
+            <!-- Row 4: Additional comparison row -->
+            <tr>
+              <td>Information Systems</td>
+              <td class="student-name">Amina Serikova</td>
+              <td>Database Management</td>
+              <td>88 / 100</td>
+              <td><strong>B+</strong></td>
+              <td><span class="status-pill status-good">Good Standing</span></td>
+            </tr>
+
+            <!-- Row 5: Colspan demonstration for cohort summary -->
+            <tr class="table-summary-row">
+              <td colspan="3" class="summary-label">Group 1 Overall Cohort Average:</td>
+              <td colspan="3" class="summary-val"><strong>94.25% &bull; Grade: A (Outstanding Performance)</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="table-legend">
+        <span class="legend-item"><span class="legend-box highlight-box"></span> Highlighted Row (.highlight-row)</span>
+        <span class="legend-item"><span class="legend-box zebra-box"></span> Alternating Row (:nth-child)</span>
+        <span class="legend-item"><span class="legend-box merged-box"></span> Merged Cell (rowspan / colspan)</span>
+      </div>
+
+    </section>
+
+    <!-- ====================================================================
+         EXERCISE 2: FEEDBACK FORM STYLING
+         ==================================================================== -->
+    <section class="section-card form-section-wrap">
+
+      <div class="form-header-box">
+        <span class="badge-pill">Exercise 2 &bull; Interactive Form</span>
+        <h2 id="feedback-form-title">Course &amp; Assignment Feedback Form</h2>
+        <p class="form-desc">
+          Please submit your evaluation and insights regarding the HTML/CSS curriculum and lab assignments.
+        </p>
+      </div>
+
+      <!-- Centered form container with fixed/max width -->
+      <form id="course-feedback-form" class="styled-feedback-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you! Feedback received successfully.');">
+        
+        <!-- Field 1: Text input for Name -->
+        <div class="form-group">
+          <label for="student-name-input" class="form-label">Full Name <span class="req">*</span></label>
+          <input 
+            type="text" 
+            id="student-name-input" 
+            name="fullName" 
+            class="form-control" 
+            placeholder="e.g., Zhassyn Zhalynuly" 
+            required>
+        </div>
+
+        <!-- Field 2: Email input for Email Address -->
+        <div class="form-group">
+          <label for="student-email-input" class="form-label">Email Address <span class="req">*</span></label>
+          <input 
+            type="email" 
+            id="student-email-input" 
+            name="email" 
+            class="form-control" 
+            placeholder="e.g., student@astanait.edu.kz" 
+            required>
+        </div>
+
+        <!-- Field 3: Select dropdown for Role -->
+        <div class="form-group">
+          <label for="user-role-select" class="form-label">Academic Role <span class="req">*</span></label>
+          <select id="user-role-select" name="role" class="form-control form-select" required>
+            <option value="" disabled selected>-- Select your role --</option>
+            <option value="Student">Student</option>
+            <option value="Teacher">Teacher / Instructor</option>
+            <option value="Other">Other / Teaching Assistant</option>
+          </select>
+        </div>
+
+        <!-- Field 4: Radio buttons for Yes/No question -->
+        <div class="form-group radio-group-container">
+          <label class="form-label">Would you recommend this web development course? <span class="req">*</span></label>
+          <div class="radio-options-row">
+            <label class="radio-label">
+              <input type="radio" name="recommendCourse" value="Yes" class="form-radio" checked required>
+              <span class="radio-custom"></span>
+              <span class="radio-text">Yes, definitely!</span>
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="recommendCourse" value="No" class="form-radio" required>
+              <span class="radio-custom"></span>
+              <span class="radio-text">No, requires changes</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Field 5: Textarea for Comments -->
+        <div class="form-group">
+          <label for="feedback-comments" class="form-label">Detailed Comments &amp; Suggestions</label>
+          <textarea 
+            id="feedback-comments" 
+            name="comments" 
+            rows="4" 
+            class="form-control form-textarea" 
+            placeholder="Share your thoughts on the lab exercises, HTML structure, or CSS styling challenges..."></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-submit-wrap">
+          <button type="submit" id="btn-submit-feedback" class="submit-button">Submit Feedback</button>
+        </div>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <footer class="footer-wrap">
+    <div class="footer-inner">
+      <p>&copy; 2026 <strong>Zhassyn Zhalynuly, Mardan Khalilov, Raiymbek Maksotov</strong> &bull; Assignment #1 Frontend Engineering</p>
+      <p class="footer-note">Astana IT University &bull; Task 4: CSS Tables &amp; Forms</p>
+    </div>
+  </footer>
+
+</body>
+</html>

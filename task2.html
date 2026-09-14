@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 1 | Task 2 - CSS Float &amp; Positioning Layout</title>
+  <link rel="stylesheet" href="task2.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Layout Container Wrapper -->
+  <div class="page-wrapper">
+
+    <!-- 1. Header Section -->
+    <div class="header-section">
+      <div class="header-inner">
+        <h1 class="site-title">Astana IT University &bull; Frontend Web Engineering</h1>
+        <p class="site-tagline">Task 2: Classic CSS Layout using Floats &amp; Positioning (Zero Flexbox / Zero Grid)</p>
+      </div>
+    </div>
+
+    <!-- 2. Navigation Bar (linked to assignment tasks) -->
+    <div class="navbar-section">
+      <div class="nav-links-wrap">
+        <a href="index.html" class="nav-item">Task 1: Intro &amp; Profile</a>
+        <a href="task2.html" class="nav-item active-nav">Task 2: Float Layout</a>
+        <a href="exercise1/index.html" class="nav-item">Task 3: Tribute Page</a>
+        <a href="task4.html" class="nav-item">Task 4: Tables &amp; Forms</a>
+        <a href="task5.html" class="nav-item">Task 5: Midterm Wireframes</a>
+      </div>
+    </div>
+
+    <!-- 3. Middle Two-Column Layout Container -->
+    <div class="main-body-container">
+
+      <!-- Left Column: Sidebar Menu (Float Left) -->
+      <div class="sidebar-column">
+        <div class="sidebar-box">
+          <h3 class="sidebar-title">Sidebar Menu</h3>
+          <ul class="sidebar-menu-list">
+            <li><a href="#about-floats" class="sidebar-link">1. CSS Float Mechanism</a></li>
+            <li><a href="#clearfix-method" class="sidebar-link">2. The Clearfix Technique</a></li>
+            <li><a href="#positioning-rules" class="sidebar-link">3. Positioning Paradigms</a></li>
+            <li><a href="#browser-history" class="sidebar-link">4. Web Layout Evolution</a></li>
+            <li><a href="#team-credits" class="sidebar-link">5. Team Contributors</a></li>
+          </ul>
+
+          <div class="sidebar-info-card">
+            <h4>Quick Notice</h4>
+            <p>This layout is engineered strictly using traditional <code class="code-pill">float: left</code>, <code class="code-pill">float: right</code>, and <code class="code-pill">clear: both</code> rules.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Main Content / Aside (Float Right) -->
+      <div class="content-column">
+        <div class="content-card" id="about-floats">
+          <h2 class="content-heading">Understanding CSS Float &amp; Clear Properties</h2>
+          <p class="content-paragraph">
+            Before modern CSS Flexbox and Grid became standardized in the mid-2010s, developers relied exclusively on the <code class="code-pill">float</code> property to create multi-column website layouts. Originally conceived to let text wrap around editorial images, floating an element takes it out of the normal block flow, shifting it to either the left or right of its parent container.
+          </p>
+          <p class="content-paragraph">
+            When adjacent block-level elements are floated together, they align horizontally. However, because floating removes elements from the standard layout geometry, parent elements can collapse unless a proper clearing mechanism (<code class="code-pill">clear: both</code> or the pseudo-element clearfix hack) is applied to restore structural containment.
+          </p>
+        </div>
+
+        <div class="content-card" id="clearfix-method">
+          <h2 class="content-heading">The Historic Significance of Float-Based Architectures</h2>
+          <p class="content-paragraph">
+            Learning traditional positioning and float behaviors provides fundamental insight into the browser's rendering engine. By mastering explicit pixel/percentage calculations, margin resets, and relative boundaries, developers gain a profound appreciation for layout stability and backward-compatible web architectures.
+          </p>
+          <div class="callout-quote">
+            <strong>Group Assignment Note:</strong> Developed by Zhassyn Zhalynuly, Mardan Khalilov, and Raiymbek Maksotov for Assignment 1.
+          </div>
+        </div>
+      </div>
+
+      <!-- Clearfix: ensures parent container encloses floated children -->
+      <div class="clearfix"></div>
+
+    </div>
+
+    <!-- 4. Footer Section -->
+    <div class="footer-section">
+      <div class="footer-inner">
+        <p class="copyright-text">
+          &copy; 2026 <strong>Zhassyn Zhalynuly, Mardan Khalilov, Raiymbek Maksotov</strong> &bull; All Rights Reserved.
+        </p>
+        <p class="footer-sub">Astana IT University &bull; Department of Computer Engineering &bull; Assignment #1</p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

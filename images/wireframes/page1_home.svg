@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="800" height="560">
+  <rect width="800" height="560" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+  
+  <!-- WIREFRAME HEADER -->
+  <rect x="20" y="20" width="760" height="50" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <rect x="35" y="32" width="110" height="26" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+  <text x="90" y="49" font-family="monospace" font-size="12" fill="#475569" text-anchor="middle">[LOGO: DevSphere]</text>
+  
+  <!-- NAV LINKS -->
+  <g font-family="sans-serif" font-size="11" fill="#64748b">
+    <rect x="380" y="32" width="60" height="24" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <text x="410" y="48" text-anchor="middle">Home</text>
+    <rect x="450" y="32" width="65" height="24" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <text x="482" y="48" text-anchor="middle">Projects</text>
+    <rect x="525" y="32" width="70" height="24" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <text x="560" y="48" text-anchor="middle">Community</text>
+    <rect x="605" y="32" width="65" height="24" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <text x="637" y="48" text-anchor="middle">Contact</text>
+    <rect x="680" y="30" width="85" height="28" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
+    <text x="722" y="48" text-anchor="middle" font-weight="bold">+ Post Project</text>
+  </g>
+
+  <!-- HERO SECTION -->
+  <rect x="20" y="85" width="760" height="150" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <rect x="50" y="105" width="380" height="28" fill="#e2e8f0"/>
+  <text x="60" y="124" font-family="sans-serif" font-size="14" font-weight="bold" fill="#334155">Hero: Showcase &amp; Discover Student Projects</text>
+  <rect x="50" y="142" width="340" height="12" fill="#f1f5f9"/>
+  <rect x="50" y="160" width="280" height="12" fill="#f1f5f9"/>
+  <rect x="50" y="185" width="120" height="32" fill="#e2e8f0" stroke="#64748b" stroke-width="1.5"/>
+  <text x="110" y="205" font-family="sans-serif" font-size="12" font-weight="bold" fill="#334155" text-anchor="middle">Explore Catalog</text>
+  <rect x="180" y="185" width="110" height="32" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+  <text x="235" y="205" font-family="sans-serif" font-size="12" fill="#64748b" text-anchor="middle">Join Community</text>
+
+  <!-- Hero Illustration box with cross -->
+  <rect x="470" y="100" width="280" height="120" fill="#f8fafc" stroke="#cbd5e1" stroke-dasharray="3,3"/>
+  <line x1="470" y1="100" x2="750" y2="220" stroke="#e2e8f0" stroke-width="1.5"/>
+  <line x1="470" y1="220" x2="750" y2="100" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="610" y="165" font-family="monospace" font-size="12" fill="#94a3b8" text-anchor="middle">[HERO ILLUSTRATION]</text>
+
+  <!-- SECTION: FEATURED PROJECTS (3 CARDS) -->
+  <text x="25" y="262" font-family="sans-serif" font-size="14" font-weight="bold" fill="#334155">Featured Student Projects</text>
+  
+  <!-- Card 1 -->
+  <rect x="20" y="275" width="240" height="190" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <rect x="30" y="285" width="220" height="85" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="140" y="332" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">[Project Preview 1]</text>
+  <rect x="30" y="380" width="150" height="14" fill="#e2e8f0"/>
+  <rect x="30" y="402" width="200" height="10" fill="#f8fafc"/>
+  <rect x="30" y="418" width="160" height="10" fill="#f8fafc"/>
+  <rect x="30" y="438" width="50" height="16" fill="#e2e8f0"/>
+  <rect x="85" y="438" width="50" height="16" fill="#e2e8f0"/>
+
+  <!-- Card 2 -->
+  <rect x="280" y="275" width="240" height="190" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <rect x="290" y="285" width="220" height="85" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="400" y="332" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">[Project Preview 2]</text>
+  <rect x="290" y="380" width="150" height="14" fill="#e2e8f0"/>
+  <rect x="290" y="402" width="200" height="10" fill="#f8fafc"/>
+  <rect x="290" y="418" width="160" height="10" fill="#f8fafc"/>
+  <rect x="290" y="438" width="50" height="16" fill="#e2e8f0"/>
+  <rect x="345" y="438" width="50" height="16" fill="#e2e8f0"/>
+
+  <!-- Card 3 -->
+  <rect x="540" y="275" width="240" height="190" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <rect x="550" y="285" width="220" height="85" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="660" y="332" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">[Project Preview 3]</text>
+  <rect x="550" y="380" width="150" height="14" fill="#e2e8f0"/>
+  <rect x="550" y="402" width="200" height="10" fill="#f8fafc"/>
+  <rect x="550" y="418" width="160" height="10" fill="#f8fafc"/>
+  <rect x="550" y="438" width="50" height="16" fill="#e2e8f0"/>
+  <rect x="605" y="438" width="50" height="16" fill="#e2e8f0"/>
+
+  <!-- FOOTER -->
+  <rect x="20" y="485" width="760" height="55" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="40" y="515" font-family="sans-serif" font-size="11" fill="#64748b">&copy; 2026 DevSphere. Group: Zhassyn Z., Mardan K., Raiymbek M.</text>
+  <text x="620" y="515" font-family="sans-serif" font-size="11" fill="#64748b">Privacy | Terms | GitHub | Contact</text>
+</svg>

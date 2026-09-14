@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 1 | Task 5 - Midterm Project Topic, Sitemap &amp; Wireframes</title>
+  <link rel="stylesheet" href="task5.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Global Header Navigation -->
+  <header class="top-nav-bar">
+    <div class="nav-container">
+      <div class="brand">
+        <span class="badge">AITU</span>
+        <span class="title">Frontend Lab</span>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Task 1: Intro &amp; Profile</a>
+        <a href="task2.html">Task 2: Float Layout</a>
+        <a href="exercise1/index.html">Task 3: Tribute Page</a>
+        <a href="task4.html">Task 4: Tables &amp; Forms</a>
+        <a href="task5.html" class="active">Task 5: Midterm Wireframes</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-container">
+
+    <!-- Section 1: Midterm Project Overview & Team Card -->
+    <section class="overview-card">
+      <div class="card-badge-row">
+        <span class="badge-pill">Task 5 &bull; Midterm Project Specification</span>
+        <span class="group-pill">3 Team Members</span>
+      </div>
+      
+      <h1 class="project-main-title">DevSphere &mdash; Student Developer &amp; Project Showcase Platform</h1>
+
+      <!-- Project Description: 3-5 sentences required -->
+      <div class="description-box">
+        <h3 class="desc-heading">Project Description &amp; Purpose</h3>
+        <p class="project-desc-text">
+          <strong>DevSphere</strong> is a centralized web platform designed specifically for university software engineering students and student developers at Astana IT University. The target users are undergraduate students seeking portfolio recognition, peer collaborators looking to join ongoing software builds, and faculty mentors monitoring capstone projects. The primary purpose of the website is to streamline student project discovery, provide an open repository for university-wide code showcases, and foster peer-to-peer recruitment across specialized technical disciplines. By integrating detailed project portfolios, member skill matrices, and direct team application workflows, DevSphere elevates student projects from isolated coursework into collaborative campus initiatives.
+        </p>
+      </div>
+
+      <!-- Group Members Roster -->
+      <div class="team-roster-box">
+        <h3 class="roster-heading">Project Group Authors (3 Students):</h3>
+        <div class="team-grid">
+          <div class="member-badge">
+            <div class="member-num">1</div>
+            <div class="member-info">
+              <strong>Zhassyn Zhalynuly</strong>
+              <span>Lead Frontend &amp; Architecture</span>
+            </div>
+          </div>
+
+          <div class="member-badge">
+            <div class="member-num">2</div>
+            <div class="member-info">
+              <strong>Mardan Khalilov</strong>
+              <span>UI/UX Designer &amp; Wireframing</span>
+            </div>
+          </div>
+
+          <div class="member-badge">
+            <div class="member-num">3</div>
+            <div class="member-info">
+              <strong>Raiymbek Maksotov</strong>
+              <span>Fullstack Developer &amp; Specifications</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Section 2: Website Sitemap / Navigation Architecture -->
+    <section class="sitemap-card">
+      <div class="section-title-wrap">
+        <h2 class="section-heading">Website Sitemap &amp; Navigation Hierarchy</h2>
+        <p class="section-subtitle">Visual architecture illustrating how all 5 core pages interconnect through consistent global navigation</p>
+      </div>
+
+      <div class="sitemap-diagram">
+        
+        <!-- Level 1: Root Navigation Bar -->
+        <div class="sitemap-level level-root">
+          <div class="sitemap-node node-root">
+            <span class="node-icon">🌐</span>
+            <strong>DevSphere Platform Navigation Bar</strong>
+            <span class="node-note">Consistent Header: Logo &bull; Search &bull; Nav Links &bull; "+ Post Project"</span>
+          </div>
+        </div>
+
+        <div class="sitemap-branch-connector"></div>
+
+        <!-- Level 2: The 5 Primary Pages -->
+        <div class="sitemap-level level-pages">
+          
+          <div class="sitemap-node node-page">
+            <div class="page-tag">Page 1</div>
+            <h4>Home / Landing</h4>
+            <p>Hero banner, project spotlights, recent updates, platform metrics counter.</p>
+            <a href="#wireframe-page-1" class="view-wf-anchor">View Wireframe ↓</a>
+          </div>
+
+          <div class="sitemap-node node-page">
+            <div class="page-tag">Page 2</div>
+            <h4>Projects Catalog</h4>
+            <p>Keyword search bar, category filters, tech stack tags, paginated project cards.</p>
+            <a href="#wireframe-page-2" class="view-wf-anchor">View Wireframe ↓</a>
+          </div>
+
+          <div class="sitemap-node node-page">
+            <div class="page-tag">Page 3</div>
+            <h4>Project Details</h4>
+            <p>Screenshot gallery, tech badges, live demo / repo links, team roster, join form.</p>
+            <a href="#wireframe-page-3" class="view-wf-anchor">View Wireframe ↓</a>
+          </div>
+
+          <div class="sitemap-node node-page">
+            <div class="page-tag">Page 4</div>
+            <h4>Community Directory</h4>
+            <p>Student profile cards, university major filters, skill badges, contact modal.</p>
+            <a href="#wireframe-page-4" class="view-wf-anchor">View Wireframe ↓</a>
+          </div>
+
+          <div class="sitemap-node node-page">
+            <div class="page-tag">Page 5</div>
+            <h4>Contact &amp; Support</h4>
+            <p>Direct inquiry form, office hours, campus location, FAQ accordion section.</p>
+            <a href="#wireframe-page-5" class="view-wf-anchor">View Wireframe ↓</a>
+          </div>
+
+        </div>
+
+        <div class="sitemap-branch-connector"></div>
+
+        <!-- Level 3: Shared Footer -->
+        <div class="sitemap-level level-footer">
+          <div class="sitemap-node node-footer">
+            <span class="node-icon">📋</span>
+            <strong>Consistent Global Footer</strong>
+            <span class="node-note">Copyright &bull; Astana IT University Contacts &bull; Quick Links &bull; Terms &amp; Privacy</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 3: Detailed 5-Page Wireframe Gallery -->
+    <section class="wireframes-section">
+      <div class="section-title-wrap">
+        <h2 class="section-heading">Detailed 5-Page Wireframe Designs</h2>
+        <p class="section-subtitle">Low-fidelity structural wireframes focusing on component layout, visual balance, and navigation consistency</p>
+      </div>
+
+      <!-- Wireframe 1: Home Page -->
+      <article class="wireframe-card" id="wireframe-page-1">
+        <div class="wf-card-header">
+          <div class="wf-title-col">
+            <span class="wf-badge">Page 1 of 5</span>
+            <h3 class="wf-title">Home Page Wireframe Layout</h3>
+          </div>
+          <span class="wf-layout-tag">Hero + 3-Column Card Grid</span>
+        </div>
+        <p class="wf-notes">
+          <strong>Key Layout Components:</strong> Global header with brand logo and primary nav links; dynamic hero headline with call-to-action buttons ("Explore Catalog", "Join Community"); featured projects grid (3 cards with screenshot placeholders, title, tags, and summary); sticky global footer.
+        </p>
+        <div class="wf-preview-container">
+          <img src="images/wireframes/page1_home.svg" alt="Wireframe blueprint for Page 1: Home Page" class="wf-image">
+        </div>
+      </article>
+
+      <!-- Wireframe 2: Project Catalog Page -->
+      <article class="wireframe-card" id="wireframe-page-2">
+        <div class="wf-card-header">
+          <div class="wf-title-col">
+            <span class="wf-badge">Page 2 of 5</span>
+            <h3 class="wf-title">Project Catalog &amp; Filter Wireframe Layout</h3>
+          </div>
+          <span class="wf-layout-tag">Sidebar Filter + 2-Column Responsive Grid</span>
+        </div>
+        <p class="wf-notes">
+          <strong>Key Layout Components:</strong> Prominent search bar with instant keyword filtering; left sidebar menu containing category checkboxes (Web, Mobile, ML, Game Dev) and recruitment status; right main content displaying paginated project cards with quick links and thumbnail placeholders.
+        </p>
+        <div class="wf-preview-container">
+          <img src="images/wireframes/page2_projects.svg" alt="Wireframe blueprint for Page 2: Project Catalog Page" class="wf-image">
+        </div>
+      </article>
+
+      <!-- Wireframe 3: Project Details Page -->
+      <article class="wireframe-card" id="wireframe-page-3">
+        <div class="wf-card-header">
+          <div class="wf-title-col">
+            <span class="wf-badge">Page 3 of 5</span>
+            <h3 class="wf-title">Project Details &amp; Team Collaboration Wireframe Layout</h3>
+          </div>
+          <span class="wf-layout-tag">Two-Column Detail &amp; Sidebar Application</span>
+        </div>
+        <p class="wf-notes">
+          <strong>Key Layout Components:</strong> Breadcrumb navigation; left main showcase area featuring screenshot gallery placeholder, rich project documentation text, technology stack badges, and external repository links; right sidebar featuring team member roster cards and a one-click collaboration request form.
+        </p>
+        <div class="wf-preview-container">
+          <img src="images/wireframes/page3_details.svg" alt="Wireframe blueprint for Page 3: Project Details Page" class="wf-image">
+        </div>
+      </article>
+
+      <!-- Wireframe 4: Community Directory Page -->
+      <article class="wireframe-card" id="wireframe-page-4">
+        <div class="wf-card-header">
+          <div class="wf-title-col">
+            <span class="wf-badge">Page 4 of 5</span>
+            <h3 class="wf-title">Student Community Directory Wireframe Layout</h3>
+          </div>
+          <span class="wf-layout-tag">Search Header + 3-Column Profile Cards Grid</span>
+        </div>
+        <p class="wf-notes">
+          <strong>Key Layout Components:</strong> Community search and academic major filter dropdown; 3-column student cards showcase featuring Zhassyn Zhalynuly (Frontend Lead), Mardan Khalilov (UI/UX Designer), and Raiymbek Maksotov (Fullstack Dev), complete with avatar placeholders, university credentials, skills tags, and "View Profile" actions.
+        </p>
+        <div class="wf-preview-container">
+          <img src="images/wireframes/page4_community.svg" alt="Wireframe blueprint for Page 4: Community Directory Page" class="wf-image">
+        </div>
+      </article>
+
+      <!-- Wireframe 5: Contact & Support Page -->
+      <article class="wireframe-card" id="wireframe-page-5">
+        <div class="wf-card-header">
+          <div class="wf-title-col">
+            <span class="wf-badge">Page 5 of 5</span>
+            <h3 class="wf-title">Contact &amp; Support Wireframe Layout</h3>
+          </div>
+          <span class="wf-layout-tag">Two-Column Inquiry Form &amp; FAQ Accordion</span>
+        </div>
+        <p class="wf-notes">
+          <strong>Key Layout Components:</strong> Left column interactive contact form (Name, University Email, Topic select dropdown, Textarea comments, Send button); right column university campus address, team contact emails, and recurring FAQ answers.
+        </p>
+        <div class="wf-preview-container">
+          <img src="images/wireframes/page5_contact.svg" alt="Wireframe blueprint for Page 5: Contact and Support Page" class="wf-image">
+        </div>
+      </article>
+
+    </section>
+
+  </main>
+
+  <footer class="footer-wrap">
+    <div class="footer-inner">
+      <p>&copy; 2026 <strong>Zhassyn Zhalynuly, Mardan Khalilov, Raiymbek Maksotov</strong> &bull; Assignment #1 Frontend Lab</p>
+      <p class="footer-sub">Task 5 &bull; Midterm Project Topic &amp; Wireframe Architecture</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,551 @@
+/* ==========================================================================
+   ASSIGNMENT 1: TASK 1 - INTRODUCTION TO HTML & CSS
+   Author: Zhassyn Zhalynuly (with Mardan Khalilov, Raiymbek Maksotov)
+   Styling demonstrates Element, Class, and ID selectors + CSS Box Model
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. CSS RESET & ELEMENT SELECTORS
+   -------------------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+  line-height: 1.65;
+  font-size: 16px;
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  color: #0f172a;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: -0.025em;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: #475569;
+}
+
+a {
+  color: #4f46e5;
+  text-decoration: none;
+  transition: all 0.25s ease-in-out;
+}
+
+/* Hover effect on links */
+a:hover {
+  color: #4338ca;
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   2. ID SELECTORS (Explicitly required by assignment)
+   -------------------------------------------------------------------------- */
+
+/* ID Selector: Global Navigation Header */
+#main-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* ID Selector: Hero Banner Section */
+#hero-banner {
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%);
+  color: #ffffff;
+  padding: 4rem 1.5rem;
+  text-align: center;
+  border-bottom: 4px solid #6366f1;
+}
+
+#hero-banner p {
+  color: #cbd5e1;
+  max-width: 760px;
+  margin: 0 auto 1.25rem auto;
+  font-size: 1.1rem;
+}
+
+#hero-banner h1 {
+  color: #ffffff;
+  margin: 1rem 0;
+}
+
+/* ID Selector: Profile Section wrapper */
+#profile-section {
+  padding: 3.5rem 0 2rem 0;
+}
+
+/* ID Selector: Footer Container */
+#main-footer {
+  background-color: #0f172a;
+  color: #94a3b8;
+  padding: 2.5rem 1.5rem;
+  margin-top: 4rem;
+  border-top: 1px solid #1e293b;
+}
+
+/* --------------------------------------------------------------------------
+   3. CLASS SELECTORS & COMPONENT LAYOUT
+   -------------------------------------------------------------------------- */
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Navigation Bar Layout */
+.nav-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0.85rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.logo-badge {
+  background-color: #4f46e5;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  letter-spacing: 0.05em;
+}
+
+.brand-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #0f172a;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-link {
+  color: #475569;
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  background-color: #eef2ff;
+  color: #4f46e5;
+  text-decoration: none;
+  border-color: #c7d2fe;
+}
+
+.nav-link.active {
+  background-color: #4f46e5;
+  color: #ffffff;
+  border-color: #4338ca;
+}
+
+/* Hero Badge & Buttons */
+.badge-pill {
+  display: inline-block;
+  background-color: rgba(99, 102, 241, 0.3);
+  color: #e0e7ff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.35rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(199, 210, 254, 0.25);
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.03em;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.75rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.6rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #4f46e5;
+  color: #ffffff;
+  border: 1px solid #4338ca;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.4);
+}
+
+.btn-primary:hover {
+  background-color: #4338ca;
+  color: #ffffff;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.5);
+}
+
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(4px);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+/* Section Headings */
+.section-heading-wrap {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 1.85rem;
+  color: #0f172a;
+}
+
+.section-subtitle {
+  color: #64748b;
+  font-size: 1rem;
+  margin-top: -0.3rem;
+}
+
+/* Profile Card Styling */
+.profile-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2.5rem;
+  margin-bottom: 3.5rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.08);
+}
+
+.avatar-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* Image Selector Requirements: max-width and border-radius */
+.profile-avatar {
+  max-width: 170px;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 4px solid #6366f1;
+  box-shadow: 0 8px 16px rgba(79, 70, 229, 0.2);
+  display: block;
+}
+
+.status-indicator {
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  width: 18px;
+  height: 18px;
+  background-color: #10b981;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+}
+
+.profile-details {
+  flex: 1;
+}
+
+.profile-badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.role-tag {
+  background-color: #e0e7ff;
+  color: #3730a3;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+}
+
+.group-tag {
+  background-color: #f1f5f9;
+  color: #475569;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+}
+
+.profile-name {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #0f172a;
+}
+
+.profile-bio {
+  color: #475569;
+  font-size: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.group-box {
+  background-color: #f8fafc;
+  border-left: 4px solid #4f46e5;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.group-heading {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #334155;
+  margin-bottom: 0.5rem;
+}
+
+.group-members-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.group-members-list li {
+  font-size: 0.95rem;
+  color: #334155;
+  margin-bottom: 0.35rem;
+}
+
+.profile-links {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: #4f46e5;
+  padding: 0.35rem 0.75rem;
+  background-color: #eef2ff;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.social-link:hover {
+  background-color: #4f46e5;
+  color: #ffffff;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+/* --------------------------------------------------------------------------
+   4. LISTS SHOWCASE GRID & CUSTOM STYLED LISTS
+   -------------------------------------------------------------------------- */
+.grid-two-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.list-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.list-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.list-icon {
+  font-size: 1.6rem;
+}
+
+.list-title {
+  font-size: 1.35rem;
+  margin-bottom: 0;
+}
+
+.list-intro {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin-bottom: 1.25rem;
+}
+
+/* Ordered List Styling */
+.custom-ordered-list {
+  padding-left: 1.5rem;
+  color: #334155;
+}
+
+.custom-ordered-list li {
+  margin-bottom: 0.9rem;
+  padding-left: 0.5rem;
+  line-height: 1.55;
+}
+
+.custom-ordered-list li::marker {
+  color: #4f46e5;
+  font-weight: 700;
+}
+
+/* Unordered List Styling */
+.custom-unordered-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.custom-unordered-list li {
+  position: relative;
+  padding-left: 1.6rem;
+  margin-bottom: 0.9rem;
+  line-height: 1.55;
+  color: #334155;
+}
+
+.custom-unordered-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #10b981;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.inline-code {
+  background-color: #f1f5f9;
+  color: #0f172a;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.85em;
+  padding: 0.15rem 0.35rem;
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+}
+
+/* Footer layout */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer-copy {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.footer-links a {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .profile-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .profile-badge-row, .profile-links {
+    justify-content: center;
+  }
+
+  .nav-container {
+    flex-direction: column;
+  }
+
+  .navbar {
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
